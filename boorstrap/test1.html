@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入Bootstrap CSS -->
+    <link href="./test.css" rel="stylesheet">
+    <title>这是钢弹</title>
+</head>
+<body>
+    <!-- 引入Bootstrap JS -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container-fluid">
+        <!-- 导航栏 -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">资料</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">信息</a>
+            </li>
+            <li class="nav-item dropdown ms-auto">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    下拉
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">操作</a></li>
+                    <li><a class="dropdown-item" href="#">设置栏目</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">更多设置</a></li>
+                </ul>
+            </li>
+        </ul>
+    
+        <!-- 轮播图 -->
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner custom-carousel">
+                <div class="carousel-item active">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    
+        <!-- 卡片 -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">卡片标题 1</h5>
+                        <p class="card-text">这是一张非常有趣的卡片，包含了一些简短的描述信息。</p>
+                        <a href="#" class="btn btn-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">卡片标题 2</h5>
+                        <p class="card-text">这张卡片有着另一段描述，引起人们的兴趣。</p>
+                        <a href="#" class="btn btn-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">卡片标题 3</h5>
+                        <p class="card-text">这是第三张卡片，它展示了更多的信息和详情。</p>
+                        <a href="#" class="btn btn-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img src="https://th.bing.com/th/id/R.cfdd623094b04791c1b1909892ed587a?rik=X3tCtLr35%2fCJ5g&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f78a1b9a3050732ee124ba725f85842916998e019.jpg&ehk=TsLViHL0c0y5HK%2fQvZClSbd%2fFvJ%2bQHNOaHcHSCoqCKk%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">卡片标题 3</h5>
+                        <p class="card-text">这是第三张卡片，它展示了更多的信息和详情。</p>
+                        <a href="#" class="btn btn-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
