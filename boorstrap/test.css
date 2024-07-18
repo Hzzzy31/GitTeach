@@ -1,8 +1,0 @@
-/* 引用bootstrap */
-@import url("/node_modules/bootstrap/dist/css/bootstrap.min.css");
-
-.custom-carousel .carousel-item img {
-    max-height: auto; /* 限制图片的最大高度 */
-    width: auto; /* 保持图片宽度的自适应 */
-    margin: auto; /* 使图片在容器中垂直居中 */
-}
