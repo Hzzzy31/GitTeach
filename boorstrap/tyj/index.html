@@ -8,11 +8,16 @@
     display: block;
     display: flex;
     justify-content: center;
-}
-a.brand img {
+    }
+    a.brand img {
     height: 100%;
-    object-fit: contain;
-}
+    object-fit: contain;    
+    }
+    .animate__animated.animate__bounce {
+    --animate-duration: 1s;
+    --animate__faster:	800ms;
+    /* --animate-repeat: 2; */
+    }
 </style>
 
 <head>
@@ -27,6 +32,7 @@ a.brand img {
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Articles-Cards-images.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark-Multi-Column-icons.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 </head>
 
 <body>
@@ -58,7 +64,7 @@ a.brand img {
             <div class="row">
                 <div class="col-md-10 col-lg-8 offset-lg-0 mx-auto position-relative">
                     <div class="site-heading">
-                        <h1 style="margin: -137px;margin-bottom: 0px;padding: 57px;padding-top: 36px;">LZU-CHINA TEAM</h1><span class="subheading" style="padding: -29px;margin: -35px 0px 0px;margin-bottom: -3px;margin-right: -90px;margin-left: -90px;line-height: 28.4px;text-align: justify;color: var(--bs-body-bg);border-color: var(--bs-body-bg);border-top-color: var(--bs-body-bg);border-right-color: var(--bs-body-bg);border-bottom-color: var(--bs-body-bg);border-left-color: var(--bs-body-bg);box-shadow: 0px 0px;text-shadow: 0px 0px var(--bs-body-bg);position: sticky;display: block;--bs-body-font-size: 1;">Our team members hail from Lanzhou University, often referred to as the jewel of education in northwest China. They represent various colleges including art, clinical medicine, information science and engineering, life sciences, and mathematical statistics. Each team member effectively leveraged their strengths and fulfilled their responsibilities in this project. As a diverse team, we take pride in successfully completing this project1.</span>
+                        <h1 class="animate__animated animate__bounce " style="margin: -137px;margin-bottom: 0px;padding: 57px;padding-top: 36px;">LZU-CHINA TEAM</h1><span class="subheading" style="padding: -29px;margin: -35px 0px 0px;margin-bottom: -3px;margin-right: -90px;margin-left: -90px;line-height: 28.4px;text-align: justify;color: var(--bs-body-bg);border-color: var(--bs-body-bg);border-top-color: var(--bs-body-bg);border-right-color: var(--bs-body-bg);border-bottom-color: var(--bs-body-bg);border-left-color: var(--bs-body-bg);box-shadow: 0px 0px;text-shadow: 0px 0px var(--bs-body-bg);position: sticky;display: block;--bs-body-font-size: 1;">Our team members hail from Lanzhou University, often referred to as the jewel of education in northwest China. They represent various colleges including art, clinical medicine, information science and engineering, life sciences, and mathematical statistics. Each team member effectively leveraged their strengths and fulfilled their responsibilities in this project. As a diverse team, we take pride in successfully completing this project1.</span>
                     </div>
                 </div>
             </div>
