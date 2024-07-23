@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html data-bs-theme="bg-dark" lang="en">
 
+<style>
+    a.brand {
+    height: 44px;
+    width: 130px;
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+a.brand img {
+    height: 100%;
+    object-fit: contain;
+}
+</style>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -19,14 +33,13 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="mainNav">
         <!--定义容器，后面的为左上角按钮，点击用来跳转到主网页-->>
         <div class="container">
-            <!-- <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="assets/img/home-bg.jpg" alt="Toggle navigation" style="height: 30px;">
-            </button> -->
-            <!-- <a class="navbar-brand" href="index.html"></a> -->
-            <!--导航栏的svg文件图标用于返回主界面-->>
-            <!-- <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="assets/img/OIP.svg" alt="Toggle navigation" style="height: 30px;">
-            </button>             -->
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/img/OIP.svg" alt="Toggle navigation" style="height: 30px;">
+            </a>
+            <!--浙江大学成功案例-->>                
+            <!-- <a class="brand" href="{{ url_for('home') }}">
+                <img src="https://static.igem.wiki/teams/4628/wiki/teamicon.svg" alt="Flora Sentinel">
+            </a> -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
