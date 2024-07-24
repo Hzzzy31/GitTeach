@@ -1,0 +1,167 @@
+.pagecontainer{
+    position: relative;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-left: min(100px, 5vw);
+    margin-right: min(100px, 5vw);
+    margin-bottom: min(80px, 15vh);
+}
+.pagebody {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagenav {
+    height: 700px;
+    width: 15%;
+    max-width: 720px;
+    min-width: 350px;
+    position: sticky;
+    top: 18vh;
+    margin-right: max(25px, 2vw);
+    padding: 30px 20px 30px 10px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transform: translateX(-10%);
+}
+.img-pagestyle{
+    margin: 20px auto 20px;
+    /* width and height of pictures! */
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.homepage-content-img1{
+    top: 930px;
+    transform: translateX(-73%);
+    width: 349.375px;
+    height: 526.094px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image1.png"), 50% / cover no-repeat;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.homepage-content-img2{
+    top: 1358px;
+    transform: translateX(40%);
+    width: 459.74px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image2.png"), 40% no-repeat;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.homepage-holder{
+    /* it holds and expands the whole homepage */
+    margin: 0 auto;
+    width: max(100%, 1300px);
+    height: 11500px;
+    background-color: black;
+    /* the following codes make all boxes placed in center */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+}
+
+/* all the main block elements below need to add position: absolute */
+/* z-index: contents-9; backgrounds-0; canvas-5; navbar-10; logoShelter-7; logoStatic-8; shelterForbg1-6; shelterForCanvasStart-6; */
+
+
+
+/* for canvas */
+#tutorial{
+    position: absolute;
+    z-index: 5;
+    top: 700px;
+}
+
+.hp-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://tse1-mm.cn.bing.net/th/id/OIP-C.qhX9fAjgBUZJBoGOCl_7WwHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.subpage-bg-shelter{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+.homepage-maintitle{
+    top: 260px;
+    width: 1300px;
+    height: 400px;
+
+}
+.homepage-maintitle-name{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 1300px;
+    height: 200px;
+    color: #F8F0E8;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    font-family: Arlon;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+}
+.homepage-subtitle-style{
+    margin: 0 auto;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: Arlon;
+    font-size: 40.625px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.homepage-contents-style{
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: AlibabaPuHuiTi;
+    font-size: 20.313px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.homepage-elements{
+    /* not for backgrounds!! */
+    position: absolute;
+    z-index: 9;
+}
+
+/* shelter for canvas start */
+.shelter-for-canvas-start{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    top: 950px;
+    z-index: 6;
+    transform: translateX(-150%);
+    background-color: black;
+}
+.homepage-content1{
+    top: 900px;
+    transform: translateX(28%);
+    width: 440px;
+    height: 450px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
