@@ -1,0 +1,1158 @@
+*{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: AlibabaPuHuiTi;
+    src: url(https://static.igem.wiki/teams/4594/wiki/alibabafont.ttf);
+}
+@font-face {
+    font-family: Arlon;
+    src: url(https://static.igem.wiki/teams/4594/wiki/arlonfont.otf);
+}
+body{
+    background-color: black;
+}
+
+/* change font-family */
+/* pff stands for p's font-family */
+.pff{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.pagecontainer{
+    position: relative;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-left: min(100px, 5vw);
+    margin-right: min(100px, 5vw);
+    margin-bottom: min(80px, 15vh);
+}
+
+.pagecontainer>.title{
+    margin-bottom: 10vh;
+}
+.pagecontainer>.title>span{
+    font-family: Arlon;
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: transparent;
+    -webkit-text-stroke: 3px #F8F0E8;
+}
+.pagecontainer>.title2>span{
+    font-family: Arlon;
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #F8F0E8;
+    /* -webkit-text-stroke: 3px black; */
+}
+.pagecontainer>.title>p{
+    text-align: left;
+    margin-top: 35px;
+    width: 70%;
+    font-family: AlibabaPuHuiTi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #F8F0E8;
+    text-align: justify;
+}
+
+.pagebody {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagenav {
+    height: 700px;
+    width: 15%;
+    max-width: 720px;
+    min-width: 350px;
+    position: sticky;
+    top: 18vh;
+    margin-right: max(25px, 2vw);
+    padding: 30px 20px 30px 10px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transform: translateX(-10%);
+}
+.pagenav>div {
+    height: min(3vw, 53px);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.pagenav>div::before{
+    content:'';
+    width:0;
+    height:100%;
+    display:inline-block;
+    position:relative;
+    vertical-align:middle;
+}
+.pagenav>div>span{
+    font-family: Arlon;
+    color: #F8F0E8;
+    font-size: min(1.56vw, 24px);
+    letter-spacing: 2px;
+    vertical-align: middle;
+    transition: all 0.2s ease-out;
+}
+.pagenav>div>span:hover{
+    font-size: min(1.6vw, 26px);
+    transition: all 0.1s linear;
+}
+
+
+.pagecontent {
+    background: #F8F0E8;
+    padding: 30px 5%;
+    margin-right: 0;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1600px;
+    transform: translateY(10vh);
+    border-radius: 50px;
+}
+.pagecontent .h{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+/* Katie! */
+.pagecontent .h-maomao{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 40px;
+}
+.box-maomao{
+    width: 200px;
+    height: 180px;
+    display: inline-block;
+    background-color: #F8F0E8;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+.box-img-maomao{
+    width: 200px;
+    height: 130px;
+    margin: 0 auto;
+}
+.text-maomao{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: min(1.4vw,18px);
+    font-family: Arlon;
+    font-weight: 600;
+    transition: all 0.15s linear;
+}
+.img-maomao{
+    margin: 5px auto 0px;
+    width: 180px;
+    height: 120px;
+    transform: translateX(7px);
+    transition: all 0.15s linear;
+    /* margin-right: 0px; */
+}
+.img-maomao>img{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* upon */
+.pagecontent .h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3.07vw;
+    font-family: Arlon;
+    font-weight: 600;
+}
+.pagecontent .h2{
+    text-align: left;
+    font-size: max(2.2vw, 25px);
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-family: Arlon;
+    font-weight: 600;
+    color: #4A65FA;
+}
+.pagecontent .h3{
+    text-align: left;
+    font-size: max(2vw, 23px);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: Arlon;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.pagecontent .h4{
+    text-align: left;
+    font-size: max(1.7vw, 20px);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: Arlon;
+    font-weight: 600;
+    margin-left: 60px;
+}
+.img-pagestyle{
+    margin: 20px auto 20px;
+    /* width and height of pictures! */
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+.img-pagestyle>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.pagecontent p{
+    margin-top: 20px;
+    text-align: justify;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw, 22px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.pagecontent .a-pagestyle{
+    text-decoration: none;
+    color: #3789da;
+}
+.pagecontent .a-pagestyle:hover{
+    text-decoration: underline;
+}
+.pagecontent .my-formula{
+    font-size: min(1vw, 20px);
+    text-align: left;
+    padding-left: 2vw;
+}
+.pagecontent .my-center-formula{
+    font-size: min(1.2vw, 22px);
+    text-align: center;
+}
+
+/* table */
+.pagecontent table{
+    width: 80%;
+    height: 80%;
+    margin: 30px auto 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-family: AlibabaPuHuiTi;
+}
+.pagecontent th{
+    border: 2px solid black;
+}
+.pagecontent td{
+    border: 2px solid black;
+}
+.pagecontent thead{
+    font-size: min(1.7vw, 25px);
+}
+.pagecontent tbody{
+    font-size: min(1.5vw, 22px);
+}
+.pagecontent .figure-font{
+    display: block;
+    margin: 5px auto 20px;
+    text-align: center;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.3vw, 18px);
+    font-style: italic;
+    color: rgb(81, 81, 81);
+}
+
+/* parts-table */
+.parts-table table{
+    width: 100%;
+    height: 80%;
+    margin: 30px auto 10px;
+    border: 2px solid #B6B2AF;
+    border-collapse: collapse;
+    font-family: AlibabaPuHuiTi;
+    background: #ccc;
+}
+.parts-table th{
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0 10px 0 10px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #eee;
+    font-weight: normal;
+    font-size: min(1.52vw, 22px);
+    font-weight: 600;
+}
+.parts-table td{
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0 10px 0 10px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: min(1.3vw, 18px);
+}
+.parts-table tr{
+    background: #fff;
+}
+.parts-table td:hover{
+    background: rgb(195, 204, 224);
+}
+.parts-table a{
+    text-decoration: none;
+    color: black;
+}
+.parts-table a:hover{
+    text-decoration: underline;
+    color: rgb(100, 164, 184);
+}
+
+
+
+@media screen and (max-width:1100px){
+    .pagenav{
+        display: none;
+    }
+}
+
+
+
+/* css for team roster page */
+
+.roster-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/roster-static/roster-bg-image1.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.roster-pagecontainer{
+    position: relative;
+    justify-content: center;
+    margin-top: 20vh;
+    z-index: 5;
+    width: 95%;
+    margin: 0 auto;
+}
+.roster-title{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 3.8vw;
+}
+.roster-title>span{
+    font-family: Arlon;
+    font-size: 8.46vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #F8F0E8;
+}
+.roster-title>p{
+    text-align: left;
+    margin-top: 35px;
+    width: 62%;
+    font-family: AlibabaPuHuiTi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #F8F0E8;
+}
+.roster-pagecontent{
+    width: 71%;
+    transform: translateX(10%);
+    margin: 12vw auto 50px;
+    position: relative;
+    padding: 3.9vw;
+    border-radius: 30px;
+    background-color: #F8F0E8;
+}
+.roster-pagecontent-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.roster-pagecontent-per{
+    /* each box's size! */
+    width: 250px;
+    height: 400px;
+    padding: 5px;
+}
+
+.roster-head{
+    border-radius: 50%;
+    /* width and height of pictures! */
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+}
+.roster-head>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.roster-name{
+    margin-top: 10px;
+    color: #000;
+    font-family: AlibabaPuHuiTi;
+    /* font-size! */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.roster-infos{
+    margin-top: 15px;
+}
+.roster-infos>p{
+    color: #000;
+    font-family: AlibabaPuHuiTi;
+    /* font-size! */
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+}
+.roster-maomao{
+    position: relative;
+    justify-content: center;
+    z-index: 5;
+    width: 100%;
+    margin: 0 auto;
+    height: 150px;
+    margin-bottom: 0;
+    transform: translateY(150px);
+    transition: all 0.65s ease-in-out;
+}
+.roster-maomao-image{
+    margin: 0 auto;
+    width: 90%;
+    height: 150px;
+    background: url(https://static.igem.wiki/teams/4594/wiki/bottom-maomao.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (min-width:1600px){
+    .roster-head{
+        width: 220px;
+        height: 220px;
+    }
+    .roster-name{
+        font-size: 25px;
+    }
+    .roster-infos>p{
+        font-size: 20px;
+    }
+    .roster-pagecontent-per{
+        width: 320px;
+        height: 520px;
+        padding: 8px;
+    }
+}
+@media screen and (max-width:1100px){
+    .roster-head{
+        width: 130px;
+        height: 130px;
+    }
+    .roster-name{
+        font-size: 16px;
+    }
+    .roster-infos>p{
+        font-size: 12px;
+    }
+    .roster-pagecontent-per{
+        width: 200px;
+        height: 350px;
+        padding: 3px;
+    }
+}
+
+/* upon */
+
+/* css for attribution page */
+.attr-pagecontainer{
+    position: relative;
+    justify-content: center;
+    margin: 20vh auto 20px;
+    width: 88%;
+    background-color: #F8F0E8;
+    border-radius: 30px 30px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 10px #F8F0E8;
+}
+/* upon */
+
+
+
+
+
+
+
+/* css for ihp */
+/* css for ihp */
+.hp-pagecontainer{
+    position: relative;
+    justify-content: center;
+    margin-top: 10vh;
+    padding: 1.5vw;
+    /* border: 1px solid white; */
+    width: 80%;
+    margin: 10vh auto 4vh;
+}
+.hp-title{
+    /* margin-bottom: 10px; */
+    transform: translateX(-3.2%);
+}
+.hp-title>span{
+    color: transparent;
+    font-family: Arlon;
+    font-size: max(5.8vw, 45px);
+    font-style: normal;
+    font-weight: 600;
+    -webkit-text-stroke: 3px #F8F0E8;
+    line-height: 135px;
+}
+.hp-title>p{
+    margin-top: 35px;
+    text-align: justify;
+    color: #F8F0E8;
+    width: 70%;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw,20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.hp-contents-container{
+    margin: 10vh auto 60px;
+    padding-right: 2vw;
+}
+.hp-contents-box{
+    height: 440px;
+    display: block;
+    margin-bottom: 0px;
+    /* 清除inline-block的影响 */
+    font-size: 0px;
+}
+.hp-left-content{
+    width: 20%;
+    height: 440px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    /* overflow: hidden; */
+}
+.hp-left-content-date{
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+.hp-left-content-date>span{
+    color: #F8F0E8;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw,20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: inline-block;
+    width: 120px;
+    vertical-align: middle;
+}
+.hp-left-content-date>div{
+    margin-left: 20px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F8F0E8;
+    vertical-align: middle;
+}
+.hp-left-content-line{
+    width: 17px;
+    height: 440px;
+    background-color: #B6B2AF;
+    transform: translateX(157px);
+}
+.hp-right-content{
+    width: 80%;
+    height: 440px;
+    display: inline-block;
+    border-radius: 50px 50px 50px 50px;
+    background: #F8F0E8;
+    vertical-align: top;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.hp-right-content1{
+    width: 100%;
+    /* 410px + 30 margin = 440px */
+    height: 410px;
+    display: block;
+    border-radius: 50px 50px 0px 0px;
+    background: #F8F0E8;
+}
+.hp-right-content1-title{
+    margin: 30px auto 25px;
+    padding-left: 27px;
+    text-align: left;
+    font-family: Arlon;
+    font-size: min(3vw,40px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.hp-right-content1-infos{
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: space-between;
+}
+.hp-right-content1-infos-left{
+    width: 25%;
+    height: 300px;
+}
+.hp-right-content1-infos-left>div{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* background-color: black; */
+    margin-bottom: 10px;
+}
+.hp-right-content1-infos-left>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hp-right-content1-infos-left>span{
+    color: #000;
+    font-family: AlibabaPuHuiTi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 10px;
+}
+.hp-right-content1-infos-left>p{
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: min(1vw,13px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: black;
+    font-family: AlibabaPuHuiTi;
+}
+.hp-right-content1-infos-right{
+    width: 70%;
+    height: 300px;
+    position: relative;
+}
+.hp-right-content1-infos-right>p{
+    color: #000;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw,20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+.hp-button1{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/ihp-static/hp-button1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+.hp-button2{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/ihp-static/hp-button2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+/* details */
+.hp-details-box{
+    display: none;
+    /* display: flex; */
+    margin-bottom: 0px;
+}
+.hp-left-details{
+    width: 20%;
+}
+.hp-left-details-line{
+    width: 17px;
+    height: 100%;
+    background-color: #B6B2AF;
+    transform: translate(157px, 0px);
+}
+.hp-right-details{
+    padding: 50px;
+    width: 80%;
+    border-radius: 0 0 50px 50px;
+    background: #D8D6D3;
+    overflow: hidden;
+}
+.hp-right-details>p{
+    color: #000;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw,20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+/* margin */
+.hp-margin-box{
+    display: block;
+    /* 消除inline-block影响 */
+    font-size: 0px;
+    height: 80px;
+}
+.hp-left-margin{
+    display: inline-block;
+    margin-left: 0px;
+    width: 20%;
+}
+.hp-left-margin-line{
+    width: 17px;
+    height: 80px;
+    background-color: #B6B2AF;
+    transform: translateX(157px);
+}
+.hp-right-margin{
+    display: inline-block;
+    width: 80%;
+    height: 80px;
+    margin-right: 0px;
+    color: #F8F0E8;
+    text-align: center;
+    font-family: Arlon;
+    font-size: 3vw;
+    font-weight: 600;
+}
+.hp-right-margin>p{
+    transform: translateY(-35%);
+}
+/* reflection */
+.ref-button1{
+    background: url("https://static.igem.wiki/teams/4594/wiki/ihp-static/hp-button4.svg");
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    transform: translateY(24%);
+}
+.ref-button2{
+    background: url("https://static.igem.wiki/teams/4594/wiki/ihp-static/hp-button3.svg");
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    transform: translateY(24%);
+}
+.ref-nobutton{
+    background-color: #F8F0E8;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(24%);
+}
+.ref-hp-right-content{
+    width: 80%;
+    display: flex;
+    border-radius: 50px;
+    background: #F8F0E8;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 50px;
+    opacity: 0;
+}
+.ref-hp-right-content>p{
+    color: #000;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw,20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+.ref-hp-right-content1-title{
+    margin: 30px auto 25px;
+    padding-left: 27px;
+    text-align: left;
+    font-family: Arlon;
+    font-size: min(3vw,40px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.ref-hp-left-content{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 181px;
+}
+.ref-hp-left-content>span{
+    color: #F8F0E8;
+    font-family: AlibabaPuHuiTi;
+    font-size: min(1.5vw,20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* bottom button */
+#back-to-top-hp-button{
+    text-decoration:none;
+    color:#F8F0E8;
+}
+#back-to-top-hp-button:hover{
+    color:#afada9;
+}
+#back-to-top-hp-border{
+    border:5px solid #F8F0E8;
+}
+#back-to-top-hp-border:hover{
+    border-color: #afada9;
+}
+
+
+/* for each subpage's background-image */
+.contribution-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-contribution-project.jpeg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.description-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-description-project.jpg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.design-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-design-project.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.drylab-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-drylab.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.edu-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-edu.jpeg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.hp-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/hp-bg-img666.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.implement-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-implement-project.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.poc-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-poc-project.jpeg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.safety-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-safety.jpeg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.wetlab-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/bg-wetlab.jpeg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.collaboration-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/collaborationslsh.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.partnership-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bg-static/par-bg-img.png");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.subpage-bg-shelter{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media screen and (max-width:1400px){
+    /* left content */
+    .hp-left-content-date{
+        transform: translateX(-25px);
+    }
+    .hp-left-content-date>span{
+        font-size: 15px;
+        width: 100px;
+    }
+    .hp-left-content-date>div{
+        width: 40px;
+        height: 40px;
+        margin-left: 0px;
+    }
+    .hp-left-content-line{
+        width: 14px;
+        transform: translateX(87px);
+    }
+    /* left detail */
+    .hp-left-details-line{
+        width: 14px;
+        transform: translate(87px, 0px);
+    }
+    /* left margin */
+    .hp-left-margin-line{
+        width: 14px;
+        transform: translateX(87px);
+    }
+
+    /* left ref */
+    .ref-hp-left-content{
+        transform: translateX(-40px);
+    }
+    .ref-button1{
+        width: 40px;
+        height: 40px;
+    }
+    .ref-button2{
+        width: 40px;
+        height: 40px;
+    }
+    .ref-nobutton{
+        width: 40px;
+        height: 40px;
+    }
+    .ref-hp-left-content{
+        width: 145px;
+    }
+    .ref-hp-left-content>span{
+        font-size: 17px;
+    }
+    /* right content */
+    .hp-right-content1-infos-left>div{
+        width: 100px;
+        height: 100px;
+    }
+    /* right font-size */
+    .hp-right-content1-title{
+        font-size: 35px;
+    }
+    .hp-right-content1-infos-left>span{
+        font-size: 18px;
+        padding-left: 8px;
+    }
+    .hp-right-content1-infos-left>p{
+        margin-top: 4px;
+        padding-left: 8px;
+        font-size: 10px;
+    }
+    .hp-right-content1-infos-right>p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    /* left content */
+    .hp-left-content{
+        display: none;
+    }
+    /* left detail */
+    .hp-left-details{
+        display: none;
+    }
+    /* left margin */
+    .hp-left-margin{
+        display: none;
+    }
+    /* right font-size */
+    .hp-right-content1-title{
+        font-size: 32px;
+    }
+    .hp-right-content1-infos-left>span{
+        font-size: 18px;
+        padding-left: 6px;
+    }
+    .hp-right-content1-infos-left>p{
+        margin-top: 5px;
+        padding-left: 6px;
+        font-size: 12px;
+    }
+    /* right center */
+    .hp-contents-box{
+        text-align: center;
+    }
+    .hp-details-box{
+        justify-content: center;
+    }
+    /* right ref */
+    .ref-hp-right-content{
+        opacity: 1;
+    }
+    /* hidden */
+    .hp-right-content1-infos-right>p{
+        display: none;
+    }
+    .hp-right-content1-infos-left{
+        width: 80%;
+    }
+    .hp-right-content1-infos-left>div{
+        width: 120px;
+        height: 120px;
+        margin: 1px auto 10px;
+    }
+    /* margin */
+    .hp-margin-box{
+        height: 50px;
+    }
+    .hp-right-margin{
+        width: 100%;
+    }
+}

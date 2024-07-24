@@ -1,0 +1,901 @@
+@font-face {
+    font-family: AlibabaPuHuiTi;
+    src: url(https://static.igem.wiki/teams/4594/wiki/alibabafont.ttf);
+}
+@font-face {
+    font-family: Arlon;
+    src: url(https://static.igem.wiki/teams/4594/wiki/arlonfont.otf);
+}
+.homepage-holder{
+    /* it holds and expands the whole homepage */
+    margin: 0 auto;
+    width: max(100%, 1300px);
+    height: 14500px;
+    background-color: black;
+    /* the following codes make all boxes placed in center */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+}
+
+/* all the main block elements below need to add position: absolute */
+/* z-index: contents-9; backgrounds-0; canvas-5; navbar-10; logoShelter-7; logoStatic-8; shelterForbg1-6; shelterForCanvasStart-6; */
+
+
+
+/* for canvas */
+#tutorial{
+    position: absolute;
+    z-index: 5;
+    top: 700px;
+}
+
+
+
+/* for global styles of subtitles and contents */
+.homepage-subtitle-style{
+    margin: 0 auto;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: Arlon;
+    font-size: 40.625px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.homepage-contents-style{
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: AlibabaPuHuiTi;
+    font-size: 20.313px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.homepage-elements{
+    /* not for backgrounds!! */
+    position: absolute;
+    z-index: 9;
+}
+
+
+
+/* main title style: */
+.homepage-maintitle{
+    top: 260px;
+    width: 1300px;
+    height: 400px;
+}
+.homepage-maintitle-name{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 1300px;
+    height: 200px;
+    color: #F8F0E8;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    font-family: Arlon;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+
+/* shelter for background1 */
+.shelter-for-bg1{
+    position: absolute;
+    margin: 0 auto;
+    top: 980px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 30px 20px black;
+    background-color: black;
+    z-index: 6;
+}
+
+
+
+/* shelter for canvas start */
+.shelter-for-canvas-start{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    top: 950px;
+    z-index: 6;
+    transform: translateX(-150%);
+    background-color: black;
+}
+
+
+/* background images style: */
+.homepage-bg-img1{
+    position: absolute;
+    z-index: 0;
+    width: 1300px;
+    height: 1167.231px;
+    flex-shrink: 0;
+    top: 0;
+    box-shadow: inset 120px 0px 70px -30px black, inset -120px 0px 70px -30px black;
+    background: url("https://static.igem.wiki/teams/4594/wiki/background-image1.png");
+}
+.homepage-bg-img2{
+    position: absolute;
+    z-index: 0;
+    width: 1300px;
+    height: 866.667px;
+    flex-shrink: 0;
+    top: 1686px;
+    box-shadow: inset 0px 0px 50px 30px black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.35) 100%), url("https://static.igem.wiki/teams/4594/wiki/background-image2.png"), 50% / cover no-repeat;
+    filter: blur(3.3854165077209473px);
+}
+.homepage-bg-img3{
+    position: absolute;
+    z-index: 0;
+    width: 1300px;
+    height: 884.271px;
+    flex-shrink: 0;
+    top: 8324px;
+    box-shadow: inset 0px 0px 40px 20px black;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 52.08%, #000 100%), url("https://static.igem.wiki/teams/4594/wiki/background-image3.png"), 50% / cover no-repeat;
+    filter: blur(3.3854165077209473px);
+}
+
+
+
+/* content images style: */
+.homepage-content-img1{
+    top: 930px;
+    transform: translateX(-73%);
+    width: 349.375px;
+    height: 526.094px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image1.png"), 50% / cover no-repeat;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.homepage-content-img2{
+    top: 1358px;
+    transform: translateX(40%);
+    width: 459.74px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image2.png"), 40% no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img3{
+    top: 2080px;
+    transform: translateX(-65%);
+    width: 465.833px;
+    height: 304.688px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    /* border: 0.677px solid #FFF; */
+    background: url("https://static.igem.wiki/teams/4594/wiki/homepage-gaigaigailsh.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: black; */
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img4{
+    top: 2080px;
+    transform: translateX(65%);
+    width: 467.188px;
+    height: 304.688px;
+    flex-shrink: 0;
+    /* border: 0.677px solid #FFF; */
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/hompage-add12.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: bottom 63px right 30px;
+    /* background-color: black; */
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img5{
+    top: 3377px;
+    width: 848.385px;
+    height: 304.688px;
+    flex-shrink: 0;
+    background: url("https://static.igem.wiki/teams/4594/wiki/homepage-whatif100.png");
+    transition: all 0.8s linear;
+}
+.homepage-content-img6{
+    top: 4110px;
+    transform: translateX(40%);
+    width: 323.646px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image6.png"), 50% / cover no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img7{
+    /* it's a static for logo shelter, thus z-index is different */
+    /* this element in .html has no class "homepage-elements" */
+    top: 5640px;
+    width: 1017px;
+    height: 243px;
+    overflow: hidden;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image7.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 8;
+    transform: translateX(0.8px);
+    background-size: cover;
+}
+.homepage-content-img8{
+    top: 6700px;
+    width: 318.229px;
+    height: 376.458px;
+    flex-shrink: 0;
+    transform: translateX(110%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.30) 100%), url("https://static.igem.wiki/teams/4594/wiki/content-image8.png"), 0px / 124.243% 105.026% no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img9{
+    top: 6790px;
+    width: 400.833px;
+    height: 400.833px;
+    transform: translateX(-42.5%);
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image9.png");
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img10{
+    top: 7345px;
+    width: 415.56px;
+    height: 236.979px;
+    transform: translate(60%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.30) 100%), url("https://static.igem.wiki/teams/4594/wiki/content-image10.png"), 0px -70.565px / 100% 129.911% no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img11{
+    top: 7478px;
+    width: 349.206px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    transform: translateX(-70%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("https://static.igem.wiki/teams/4594/wiki/content-image11.png"), 50% / cover no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img12{
+    /* It's an href, img is placed in its "a" in .html */
+    top: 8515px;
+    width: 320px;
+    height: 92px;
+    transform: translateX(130%);
+}
+.homepage-content-img12>a>div{
+    margin: 0 auto;
+    width: 250px;
+    height: 60px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image12.png");
+    background-size: 125%;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: all 0.1s linear;
+}
+.homepage-content-img12>a>div:hover{
+    background-size: 130%;
+    transition: all 0.1s linear;
+}
+.homepage-content-img13{
+    top: 8697px;
+    transform: translateX(-66%);
+    width: 415.729px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("https://static.igem.wiki/teams/4594/wiki/content-image13.png"), 50% / cover no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img14{
+    top: 8697px;
+    transform: translateX(68%);
+    width: 475.313px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("https://static.igem.wiki/teams/4594/wiki/content-image14.png"), 50% / cover no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img15{
+    top: 9524px;
+    transform: translateX(110%);
+    width: 336px;
+    height: 216px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image15.png"), 50% / cover no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img16{
+    top: 9930px;
+    transform: translateX(110%);
+    width: 336px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image16.png");
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content-img17{
+    top: 11040px;
+    transform: translateX(-100%);
+    width: 285.729px;
+    height: 304.688px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image17.png"), 50% / cover no-repeat;
+}
+.homepage-content-img18{
+    top: 11090px;
+    width: 266.094px;
+    height: 203.125px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image18.png"), 50% / cover no-repeat;
+}
+.homepage-content-img19{
+    top: 11090px;
+    transform: translateX(112%);
+    width: 226.823px;
+    height: 203.125px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image19.png"), 50% / cover no-repeat;
+}
+.homepage-content-img20{
+    top: 11090px;
+    transform: translateX(250%);
+    width: 187.552px;
+    height: 203.125px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image20.png"), 50% / cover no-repeat;
+}
+.homepage-content-img21{
+    top: 11661px;
+    transform: translateX(-220%);
+    width: 192.969px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image21.png"), 50% / cover no-repeat;
+}
+.homepage-content-img22{
+    top: 11661px;
+    transform: translateX(-135%);
+    width: 171.302px;
+    height: 236.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image22.png"), 50% / cover no-repeat;
+}
+.homepage-content-img23{
+    top: 11593px;
+    transform: translateX(60%);
+    width: 290.469px;
+    height: 304.688px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image23.png"), 50% / cover no-repeat;    
+}
+.homepage-content-img24{
+    top: 11467px;
+    transform: translateX(190%);
+    width: 237px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image24.png"), 50% / cover no-repeat;    
+}
+.homepage-content-img25{
+    top: 11717px;
+    transform: translateX(190%);
+    width: 237px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image25.png"), 50% / cover no-repeat;    
+}
+.homepage-content-img26{
+    top: 12241px;
+    transform: translateX(-170%);
+    width: 237px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image26.png"), 50% / cover no-repeat;    
+}
+.homepage-content-img27{
+    top: 12241px;
+    transform: translateX(-100%);
+    width: 186px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image27.png"), 50% / cover no-repeat;    
+}
+.homepage-content-img28{
+    top: 12241px;
+    transform: translateX(70%);
+    width: 186px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image28.png"), 50% / cover no-repeat;    
+}
+.homepage-content-img29{
+    top: 12241px;
+    transform: translateX(155%);
+    width: 216.582px;
+    height: 304.688px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image29.png"), 50% / cover no-repeat;  
+}
+.homepage-content-img30{
+    top: 12826px;
+    transform: translateX(-140%);
+    width: 203.125px;
+    height: 304.688px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image30.png"), 50% / cover no-repeat;  
+}
+.homepage-content-img31{
+    top: 12826px;
+    transform: translateX(-44%);
+    width: 190.26px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image31.png"), 50% / cover no-repeat;  
+}
+.homepage-content-img32{
+    top: 12826px;
+    transform: translateX(57.8%);
+    width: 193px;
+    height: 237px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/content-image32.png"), 50% / cover no-repeat;  
+}
+
+
+
+/* bottom links style */
+.homepage-link1{
+    top: 13551px;
+    transform: translateX(-410px);
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-link2{
+    top: 13551px;
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-link3{
+    top: 13551px;
+    transform: translateX(410px);
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-link1>a{
+    text-decoration: none;
+}
+.homepage-link2>a{
+    text-decoration: none;
+}
+.homepage-link3>a{
+    text-decoration: none;
+}
+.homepage-link-img1{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/homepage-lshgaide.png");
+    background-repeat: no-repeat;
+    background-size: 91%;
+    background-position: center;
+    transition: all 0.1s linear;
+    transform: translateY(2px);
+}
+.homepage-link-img2{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/homepage-img104.png");
+    background-repeat: no-repeat;
+    background-size: 91%;
+    background-position: center;
+    transition: all 0.1s linear;
+    transform: translateY(2px);
+}
+.homepage-link-img3{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    background: url("https://static.igem.wiki/teams/4594/wiki/homepage-img105.png");
+    background-repeat: no-repeat;
+    background-size: 91%;
+    background-position: center;
+    transition: all 0.1s linear;
+    transform: translateY(2px);
+}
+
+
+
+
+/* content boxes style: */
+.homepage-content1{
+    top: 900px;
+    transform: translateX(28%);
+    width: 440px;
+    height: 450px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content2{
+    top: 1788px;
+    transform: translateX(-80%);
+    width: 415px;
+    height: 200px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content3{
+    top: 2400px;
+    width: 1000px;
+    height: 35px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content4{
+    /* it's a subtitle content */
+    top: 2864px;
+    width: 560px;
+    height: 190px;
+    font-family: Arlon;
+    font-size: 135px;
+    font-style: normal;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #F8F0E8;
+    opacity: 0;
+    transition: all 0.7s linear;
+}
+.homepage-content5{
+    top: 3805px;
+    width: 400px;
+    height: 65px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content6{
+    top: 4165px;
+    width: 235px;
+    height: 160px;
+    transform: translateX(-110%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content7{
+    top: 4502px;
+    width: 220.052px;
+    height: 155.052px;
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content8{
+    /* it's a subtitle content */
+    top: 4910px;
+    width: 900px;
+    height: 400px;
+    font-family: Arlon;
+    font-size: 135px;
+    font-style: normal;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #F8F0E8;
+    text-align: left;
+    transform: translateX(7%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content9{
+    /* it's a shelter for lines behind logo, thus z-index is different */
+    /* this element in .html has no class "homepage-elements" */
+    top: 5750px;
+    width: 1000px;
+    height: 90px;
+    background-color: black;
+    position: absolute;
+    z-index: 7;
+}
+.homepage-content10{
+    top: 6000px;
+    width: 500px;
+    height: 28px;
+    flex-shrink: 0;
+}
+.homepage-content11{
+    top: 6630px;
+    width: 340px;
+    height: 200px;
+    transform: translateX(35%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content12{
+    top: 7100px;
+    width: 340px;
+    height: 200px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content13{
+    top: 7280px;
+    width: 340px;
+    height: 200px;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content14{
+    top: 7624px;
+    width: 340px;
+    height: 200px;
+    transform: translateX(-60%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content15{
+    /* it's a subtitle content */
+    top: 8244px;
+    width: 1000px;
+    height: 200px;
+    transform: translateX(10%);
+    font-family: Arlon;
+    font-size: 135.417px;
+    font-style: normal;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #F8F0E8;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content16{
+    top: 8505px;
+    width: 400px;
+    height: 92px;
+    transform: translateX(-70%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content17{
+    top: 8897px;
+    width: 415px;
+    height: 120px;
+    transform: translateX(-65%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content18{
+    top: 8897px;
+    width: 475px;
+    height: 120px;
+    transform: translateX(68%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content19{
+    top: 9257px;
+    width: 447px;
+    height: 200px;
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content20{
+    top: 9607px;
+    width: 447px;
+    height: 200px;
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content21{
+    top: 10023px;
+    width: 447px;
+    height: 200px;
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content22{
+    /* it's a subtitle content */
+    top: 10636px;
+    width: 900px;
+    height: 200px;
+    transform: translateX(5%);
+    font-family: Arlon;
+    font-size: 135px;
+    font-style: normal;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #F8F0E8;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content23{
+    top: 10846px;
+    width: 302px;
+    height: 100px;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content24{
+    top: 11272px;
+    width: 340px;
+    height: 120px;
+    transform: translateX(-15%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content25{
+    top: 11873px;
+    width: 400px;
+    height: 120px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content26{
+    top: 11873px;
+    width: 350px;
+    height: 100px;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content27{
+    top: 12455px;
+    width: 400px;
+    height: 120px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content28{
+    top: 12455px;
+    width: 350px;
+    height: 100px;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content29{
+    top: 12852px;
+    width: 400px;
+    height: 200px;
+    transform: translateX(80%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content30{
+    /* it's a subtitle content */
+    top: 13290px;
+    width: 1100px;
+    height: 200px;
+    text-align: center;
+    font-family: Arlon;
+    font-size: 135px;
+    font-style: normal;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #F8F0E8;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+
+/* bottom icon style */
+.bottom-icon1{
+    top: 14157px;
+    width: 209.115px;
+    height: 141.345px;
+    flex-shrink: 0;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bottom-icon1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(18%);
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+.bottom-icon2{
+    /* top: 14133px; */
+    top: 14150px;
+    width: 461.186px;
+    height: 267.135px;
+    flex-shrink: 0;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bottom-icon2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-5%);
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+.bottom-icon3{
+    /* top: 14169px; */
+    top: 14163px;
+    width: 506.307px;
+    height: 256.329px;
+    flex-shrink: 0;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bottom-icon3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-12%);
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+.bottom-icon4{
+    /* top: 14151px; */
+    top: 14154px;
+    width: 713.797px;
+    height: 232.5px;
+    flex-shrink: 0;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bottom-icon4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+.bottom-icon5{
+    /* top: 14163px; */
+    top: 14160px;
+    width: 896.432px;
+    height: 209.378px;
+    flex-shrink: 0;
+    background: url("https://static.igem.wiki/teams/4594/wiki/bottom-icon5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.8s linear;
+}
