@@ -9,9 +9,9 @@ function scrollFade() {
 		var element = fadeElements[index];
 		var rect = element.getBoundingClientRect();
 
-		var elementFourth = rect.height/4;
+		var elementFourth = rect.height / 4;
 		var fadeInPoint = window.innerHeight - elementFourth;
-		var fadeOutPoint = -(rect.height/2);
+		var fadeOutPoint = -(rect.height / 2);
 
 		if (rect.top <= fadeInPoint) {
 			element.classList.add('scrollFade--visible');
@@ -31,6 +31,6 @@ function scrollFade() {
 
 document.addEventListener('scroll', scrollFade);
 window.addEventListener('resize', scrollFade);
-document.addEventListener('DOMContentLoaded', function() {
-    scrollFade();
+document.addEventListener('DOMContentLoaded', function () {
+	scrollFade();
 });
