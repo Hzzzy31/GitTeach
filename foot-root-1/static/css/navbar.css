@@ -94,7 +94,7 @@ button {
     flex-direction: column;
     gap: 1.2rem;
 
-    background: #444;
+    background: #3375d8;
     border-radius: 0.5rem;
     transition: 0.3s all linear;
 }
@@ -210,28 +210,29 @@ button {
     }
 }
 
-/**move*/
+/**背景动图*/
 
 html,
-body {
-    min-height: 100%;
+/* body {
+    min-height: 100%; 
     height: 100%;
     position: relative;
-    overflow: hidden;
-}
+    overflow: hidden; 
+}  */
 
 .background-image {
+    overflow-x: hidden;
     width: 110%;
     height: 110%;
     left: 0;
     top: 0;
     position: absolute;
-    background: url('https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?crop=entropy&dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1450.jpg') no-repeat left center / cover;
+    background: url('https://bpic.588ku.com/video_listen/588ku_pic/22/09/22/a483e2cf70ad3af8655cb92926915c3d.jpg') no-repeat left center / cover;
 }
 
-/* Not needed styles */
+/* 设置字体大小 */
 
-h1 {
+.hh1 {
     margin: 0;
     padding: 0;
     pointer-events: none;
@@ -239,10 +240,87 @@ h1 {
     font-family: 'Lobster Two', cursive;
     font-style: italic;
     z-index: 9;
-    font-size: 100px;
+    font-size: 80px;
+    /* 调整大小 */
     color: white;
     position: absolute;
-    top: 50%;
+    top: 45%;
+    /* 调整位置 */
     left: 50%;
+    /* 调整位置 */
     transform: translate3d(-50%, -50%, 0);
+}
+
+.hh2 {
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    font-family: 'Lobster Two', cursive;
+    font-style: italic;
+    z-index: 9;
+    font-size: 40px;
+    /* 调整大小 */
+    color: white;
+    position: absolute;
+    top: 70%;
+    /* 调整位置 */
+    left: 30%;
+    /* 调整位置 */
+    transform: translate3d(-50%, -50%, 0);
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 10000px;
+    }
+}
+
+p {
+    color: #000;
+}
+
+/* 滚动条 */
+.scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: red;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
+}
+
+
+.container {
+    background: url(https://img.tukuppt.com/ad_preview/00/13/17/5c996e83ecb58.jpg!/fw/780);
+    /* background-repeat:no-repeat;
+    background-size: 100% 100%; */
+    position: relative;
+}
+
+.div1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.div2 {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
 }
