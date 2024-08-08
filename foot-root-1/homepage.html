@@ -7,8 +7,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="static\css\navbar.css" rel="stylesheet">
     <link rel="stylesheet" href="static\css\move.css" type="text/css">
+    <link rel="stylesheet" href="static\css\homeback.css" type="text/css">
     <script type="text/javascript" src="static\js\move.js"></script>
     <style>
         .body {
@@ -21,7 +24,9 @@
     <!-- 导航栏 -->
     <nav class="navbar fixed-top">
         <div>
-            <img class="logo" src="https://s0.60logo.com/uploads/items/images/soft/180131/lzu.svg">
+            <a href="homepage.html">
+                <img class="logo" src="https://s0.60logo.com/uploads/items/images/soft/180131/lzu.svg">
+            </a>
         </div>
 
         <div class="burger">
@@ -33,7 +38,49 @@
 
 
             <div class="dropdown">
-                <button>
+                <button class="reveal2">
+                    <span>Pages</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="trash"></div>
+
+                <ul class="dropdown-menu">
+                    <li><a href="page1.html">Page 1</a></li>
+                    <li><a href="page1.html">Page 2</a></li>
+                    <li><a href="page1.html">Page 3</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="reveal2">
+                    <span>Pages</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="trash"></div>
+
+                <ul class="dropdown-menu">
+                    <li><a href="page1.html">Page 1</a></li>
+                    <li><a href="page1.html">Page 2</a></li>
+                    <li><a href="page1.html">Page 3</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button  class="reveal2">
+                    <span>Pages</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="trash"></div>
+
+                <ul class="dropdown-menu">
+                    <li><a href="page3.html">Page 1</a></li>
+                    <li><a href="">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button  class="reveal2">
                     <span>Pages</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
@@ -47,49 +94,7 @@
             </div>
 
             <div class="dropdown">
-                <button>
-                    <span>Pages</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="trash"></div>
-
-                <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown">
-                <button>
-                    <span>Pages</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="trash"></div>
-
-                <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown">
-                <button>
-                    <span>Pages</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="trash"></div>
-
-                <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown">
-                <button>
+                <button  class="reveal2">
                     <span>Pages</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
@@ -109,7 +114,7 @@
     <!-- 主页背景图 -->
     <h1 class="hh1">Enlighten a Sustainable Future</h1>
     <h2 class="hh2">Team Lzu</h2>
-    <div class="background-image"></div>
+    <div class="background-image2"></div>
 
     <!-- 下拉部分 -->
 
@@ -153,7 +158,7 @@
     </div> -->
     <div class="scroll-watcher"></div>
     <div class="container" style="margin-top: 23.3cm;text-align:center;">
-        <canvas class="div1" id="tutorial" width="1300" height="500"></canvas>
+        <canvas class="div1" id="tutorial"></canvas>
         <script>
             var current_line = 300; // 初始值为300
             var lines = [300, 180, 1040, 180, 1120, 480, 700, 180, 600, 180, 210, 180, 630, 1120, 260, 180];
@@ -162,12 +167,12 @@
             var speed = 10;
             var top_screen;
             var bottom_screen;
-    
+
             function canDraw(y1, y2) {
                 if (y2 < top_screen || y1 > bottom_screen) return false;
                 else return true;
             }
-    
+
             function verticalLine(x, y1, y2, ctx, canvas_h) {
                 if (current_line >= y1 && canvas_h >= start_height) {
                     if (canDraw(y1, y2)) ctx.moveTo(x, y1);
@@ -375,7 +380,7 @@
                 if (canvas_h % 10 == 1) {
                     canvas_h -= 1;
                 }
-    
+
                 if (!canvas.getContext) return;
                 var ctx = canvas.getContext("2d");
                 var gradient = ctx.createLinearGradient(0, 0, 0, 13370);
@@ -385,12 +390,12 @@
                 gradient.addColorStop(0.381, "#FA8072");
                 gradient.addColorStop(0.387, "#15EAEE");
                 gradient.addColorStop(0.38, "#15EAEE");
-                gradient.addColorStop(0.41, "#2B5D6F");
-                gradient.addColorStop(0.53534, "#2B5D6F");
-                gradient.addColorStop(0.57648, "#653F05");
-                gradient.addColorStop(0.63287, "#653F05");
-                gradient.addColorStop(0.68127, "#2B5D6F")
-                gradient.addColorStop(1, "#2B5D6F");
+                // gradient.addColorStop(0.41, "#2B5D6F");
+                // gradient.addColorStop(0.53534, "#2B5D6F");
+                // gradient.addColorStop(0.57648, "#653F05");
+                // gradient.addColorStop(0.63287, "#653F05");
+                // gradient.addColorStop(0.68127, "#2B5D6F")
+                // gradient.addColorStop(1, "#2B5D6F");
                 ctx.strokeStyle = gradient;
                 // ctx.shadowColor = "#00508A";
                 // ctx.shadowBlur = 20;
@@ -399,150 +404,20 @@
                 ctx.lineJoin = 'round';
                 ctx.beginPath();
                 // console.log(current_line, canvas_h);
-    
+
                 if (canvas_h < start_height) {
                     current_line = start_height;
                 }
-    
-    
-                // verticalLine(330, 300, 450, ctx, canvas_h);
-    
-                // circularArc(300, 450, ctx, canvas_h, 3, 0);
-    
-                // horizontalLine(300, 180, 480, ctx, canvas_h, 2, 0);
-    
-                // circularArc(180, 510, ctx, canvas_h, 4, 0);
-    
-                // verticalLine(150, 510, 970, ctx, canvas_h);
-    
-                // circularArc(180, 970, ctx, canvas_h, 1, 1);
-    
-                // horizontalLine(180, 1040, 1000, ctx, canvas_h, 1, 1);
-    
-                // circularArc(1040, 1030, ctx, canvas_h, 2, 1);
-    
-                // verticalLine(1070, 1030, 1820, ctx, canvas_h);
-    
-                // circularArc(1040, 1820, ctx, canvas_h, 3, 2);
-    
-                // horizontalLine(1040, 180, 1850, ctx, canvas_h, 2, 2);
-    
-                // circularArc(180, 1880, ctx, canvas_h, 4, 2);
-    
-                // verticalLine(150, 1880, 2800, ctx, canvas_h);
-    
-                // circularArc(180, 2800, ctx, canvas_h, 1, 3);
-    
-                // horizontalLine(180, 1120, 2830, ctx, canvas_h, 1, 3);
-    
-                // circularArc(1120, 2860, ctx, canvas_h, 2, 3);
-    
-                // verticalLine(1150, 2860, 3250, ctx, canvas_h);
-    
-                // circularArc(1120, 3250, ctx, canvas_h, 3, 4);
-    
-                // horizontalLine(1120, 260, 3280, ctx, canvas_h, 2, 4);
-    
-                // circularArc(260, 3310, ctx, canvas_h, 4, 4);
-    
-                // verticalLine(230, 3310, 4620, ctx, canvas_h);
-    
-                // circularArc(260, 4620, ctx, canvas_h, 1, 14);
-    
-                // horizontalLine(260, 420, 4650, ctx, canvas_h, 1, 14);
-    
-                // circularArc(420, 4680, ctx, canvas_h, 2, 14);
-    
-                // verticalLine(450, 4680, 5070, ctx, canvas_h);
-    
-                // circularArc(480, 5070, ctx, canvas_h, 1, 5);
-    
-                // horizontalLine(480, 700, 5100, ctx, canvas_h, 1, 5);
-    
-                // circularArc(700, 5130, ctx, canvas_h, 2, 5);
-    
-                // verticalLine(730, 5130, 6330, ctx, canvas_h);
-    
-                // circularArc(700, 6330, ctx, canvas_h, 3, 6);
-    
-                // horizontalLine(700, 180, 6360, ctx, canvas_h, 2, 6);
-    
-                // circularArc(180, 6390, ctx, canvas_h, 4, 6);
-    
-                // verticalLine(150, 6390, 6570, ctx, canvas_h);
-    
-                // circularArc(180, 6570, ctx, canvas_h, 1, 7);
-    
-                // horizontalLine(180, 600, 6600, ctx, canvas_h, 1, 7);
-    
-                // circularArc(600, 6630, ctx, canvas_h, 2, 7);
-    
-                // verticalLine(630, 6630, 6840, ctx, canvas_h);
-    
-                // circularArc(600, 6840, ctx, canvas_h, 3, 8);
-    
-                // horizontalLine(600, 180, 6870, ctx, canvas_h, 2, 8);
-    
-                // circularArc(180, 6900, ctx, canvas_h, 4, 8);
-    
-                // verticalLine(150, 6900, 7760, ctx, canvas_h);
-    
-                // circularArc(180, 7760, ctx, canvas_h, 1, 9);
-    
-                // horizontalLine(180, 210, 7790, ctx, canvas_h, 1, 9);
-    
-                // circularArc(210, 7820, ctx, canvas_h, 2, 9);
-    
-                // verticalLine(240, 7820, 9890, ctx, canvas_h);
-    
-                // circularArc(210, 9890, ctx, canvas_h, 3, 10);
-    
-                // horizontalLine(210, 180, 9920, ctx, canvas_h, 2, 10);
-    
-                // circularArc(180, 9950, ctx, canvas_h, 4, 10);
-    
-                // verticalLine(150, 9950, 10790, ctx, canvas_h);
-    
-                // circularArc(180, 10790, ctx, canvas_h, 1, 11);
-    
-                // horizontalLine(180, 570, 10820, ctx, canvas_h, 1, 11);
-    
-                // circularArc(570, 10850, ctx, canvas_h, 2, 11);
-    
-                // verticalLine(600, 10850, 11380, ctx, canvas_h);
-    
-                // circularArc(630, 11380, ctx, canvas_h, 1, 12);
-    
-                // horizontalLine(630, 1120, 11410, ctx, canvas_h, 1, 12);
-    
-                // circularArc(1120, 11440, ctx, canvas_h, 2, 12);
-    
-                // verticalLine(1150, 11440, 12020, ctx, canvas_h);
-    
-                // circularArc(1120, 12020, ctx, canvas_h, 3, 13);
-    
-                // horizontalLine(1120, 180, 12050, ctx, canvas_h, 2, 13);
-    
-                // circularArc(180, 12080, ctx, canvas_h, 4, 13);
-    
-                // verticalLine(150, 12080, 12470, ctx, canvas_h);
-    
-                // circularArc(180, 12470, ctx, canvas_h, 1, 15);
-    
-                // horizontalLine(180, 620, 12500, ctx, canvas_h, 1, 15);
-    
-                // circularArc(620, 12530, ctx, canvas_h, 2, 15);
-    
-                // verticalLine(650, 12530, 13500, ctx, canvas_h);
-                verticalLine(5, 141, 8000, ctx, canvas_h);
-    
+
+                verticalLine(10, 141, 8000, ctx, canvas_h);
+
                 ctx.stroke()
                 canvas.style.backgroundColor = "transparent";
             }
             draw();
             window.addEventListener('scroll', draw);
         </script>
-        <h1 style="color: black;">Responsive vertical timeline</h1>
+        <h1 style="color: rgb(0, 0, 0);">Lzu-China</h1>
         <div class="timeline div2">
             <ul>
                 <li>
@@ -570,6 +445,244 @@
                     </div>
                     <div class="time  reveal2">
                         <h4>February 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal2">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal3">
+                        <h4>March 2018</h4>
                     </div>
                 </li>
 
@@ -624,6 +737,36 @@
                             centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                         </p>
                     </div>
+                    <div class="time  reveal4">
+                        <h4>May 2018</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="content  reveal4">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal4">
+                        <h4>May 2018</h4>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="content  reveal4">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
                     <div class="time  reveal5">
                         <h4>June 2018</h4>
                     </div>
@@ -642,6 +785,126 @@
                         <h4>July 2018</h4>
                     </div>
                 </li>
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="content  reveal5">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="time  reveal">
+                        <h4>August 2018</h4>
+                    </div>
+                </li>
+
 
                 <li>
                     <div class="content  reveal5">
@@ -699,7 +962,7 @@
                     </div>
                 </li>
 
-                <li> 
+                <li>
                     <div class="content  reveal">
                         <h3>What is Lorem Ipsum?</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -712,7 +975,7 @@
                         <h4>December 2018</h4>
                     </div>
                 </li>
-                <div style="clear:both;"></div>
+                <!-- <div style="clear:both;"></div> -->
             </ul>
         </div>
     </div>
@@ -722,6 +985,46 @@
     <script src="static/js/navbox.js"></script>
 </body>
 
-<footer>
-
-</footer>
+<footer class="footer" style="margin-top: 320cm;">
+    <div class="container2">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>online shop</h4>
+         <ul>
+           <li><a href="#">watch</a></li>
+           <li><a href="#">bag</a></li>
+           <li><a href="#">shoes</a></li>
+           <li><a href="#">dress</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
