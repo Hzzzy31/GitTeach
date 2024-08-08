@@ -1,0 +1,53 @@
+/* #circle {
+    font-size: 40px;
+    background: white;
+    border-radius: 44px;
+    position: relative;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#circle::before {
+    border-radius: 44px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: linear-gradient(to bottom, #d56e3a 0%, #d53a42 100%);
+    padding: 10px;
+    top: -12px;
+    left: -2px;
+    position: absolute;
+    z-index: -1;
+} */
+
+#circle {
+    font-size: 40px;
+    background: white;
+    border-radius: 44px;
+    position: relative;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 90%; /* 或者你想要的比例 */
+    max-width: 100vw; /* 确保不超过视口宽度 */
+    margin-left: auto;
+    margin-right: auto; /* 水平居中 */
+}
+
+#circle::before {
+    border-radius: 44px;
+    width: calc(100% + 10px); 
+    height: calc(100% + 10px); 
+    content: "";
+    background-image: linear-gradient(to bottom, #d56e3a 0%, #d53a42 100%);
+    padding: 10px;
+    top: -13px;
+    left: -13px;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+
