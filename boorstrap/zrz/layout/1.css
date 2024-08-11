@@ -1,0 +1,112 @@
+body {
+    font-family: segoe-ui_normal, Segoe UI, Segoe, Segoe WP, Helvetica Neue,
+      Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas:
+      "header nav2 nav2"
+      "nav section aside"
+      "footer footer footer";
+    grid-template-rows: 80px 1fr 1fr;
+    grid-template-columns: 15% 1fr 18%;
+    grid-gap: 5px;
+    height: 100vh;
+    margin: 10px;
+  }
+  
+  header {
+    background: #4088cc;
+    grid-area: header;
+  }
+  
+  nav {
+    background: #44f5ae;
+    grid-area: nav;
+  }
+
+  nav2 {
+    background: #aa4040;
+    grid-area: nav2;
+  }
+  
+  section {
+    background: #4eaf9f;
+    grid-area: section;
+    z-index: -2;
+  }
+  
+  aside {
+    background: #c5ba49;
+    grid-area: aside;
+  }
+  
+  footer {
+    background: #707070;
+    grid-area: footer;
+  }
+  
+  header,
+  nav,
+  section,
+  aside,
+  nav2,
+  footer {
+    padding: 5px;
+  }
+
+
+  /* 文本框 */
+  #circle {
+    /* font-size: 40px; */
+    background: rgb(249, 247, 200);
+    border-radius: 44px;
+    position: relative;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 90%; /* 调整宽度*/
+    margin-left: auto;/* 竖直居中 */
+    margin-right: auto; /* 水平居中 */
+}
+
+#circle::before {
+    border-radius: 44px;
+    width: calc(100% - 30px); 
+    height: calc(100% - 30px); 
+    content: "";
+    background-image: linear-gradient(to bottom, #d54c3a 0%, #683ad5 100%);
+    padding: 10px;
+    top: -13px;
+    left: -13px;
+    position: absolute;
+    z-index: -1;
+}
+
+p {
+    font-size: 1.1em;
+    text-align: justify;
+    text-indent:2cm
+}
+
+h1 {
+    text-align: center;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+h1.retroshadow {
+    color: #2c2c2c;
+    background-color: rgb(249, 247, 200);
+    letter-spacing: 0.05em;
+    text-shadow: 4px 4px 0px rgb(249, 247, 200), 7px 7px 0px rgba(0, 0, 0, 0.2);
+  }
+
+
+.img-container {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+  }
+  
+  .img-container img {
+    width: 60%;
+    height: auto;
+    border-radius: 30px;
+  }
