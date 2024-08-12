@@ -1,0 +1,55 @@
+#circle {
+    /* font-size: 40px; */
+    background: rgb(249, 247, 200);
+    border-radius: 44px;
+    position: relative;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 60%; /* 调整宽度*/
+    margin-left: auto;/* 竖直居中 */
+    margin-right: auto; /* 水平居中 */
+}
+
+#circle::before {
+    border-radius: 44px;
+    width: calc(100% - 30px); 
+    height: calc(100% - 30px); 
+    content: "";
+    background-image: linear-gradient(to bottom, #d54c3a 0%, #683ad5 100%);
+    padding: 10px;
+    top: -13px;
+    left: -13px;
+    position: absolute;
+    z-index: -1;
+}
+
+p {
+    font-size: 1.1em;
+    text-align: justify;
+    text-indent:2cm
+}
+
+h1 {
+    text-align: center;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+h1.retroshadow {
+    color: #2c2c2c;
+    background-color: rgb(249, 247, 200);
+    letter-spacing: 0.05em;
+    text-shadow: 4px 4px 0px rgb(249, 247, 200), 7px 7px 0px rgba(0, 0, 0, 0.2);
+  }
+
+
+.img-container {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+  }
+  
+  .img-container img {
+    width: 60%;
+    height: auto;
+    border-radius: 30px;
+  }

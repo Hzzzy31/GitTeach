@@ -2,7 +2,9 @@ document.querySelector('.burger').addEventListener('click', () => {
     document.querySelector('.navbar').classList.toggle('open');
 });
 
-const bg = document.querySelector('.background-image');
+
+
+const bg = document.querySelector('.background-image2');
 const windowWidth = window.innerWidth / 5;
 const windowHeight = window.innerHeight / 5;
 
