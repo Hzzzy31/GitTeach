@@ -1,4 +1,4 @@
-/* 中标题 */
+/* 结尾的动画 */
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -198,66 +198,7 @@ span {
 /* 框框部分 grid */
 /* 框框部分 grid */
 /* 框框部分 grid */
-/* 
-body {
-  font-family: segoe-ui_normal, Segoe UI, Segoe, Segoe WP, Helvetica Neue,
-    Helvetica, sans-serif;
-  display: grid;
-  grid-template-areas:
-    "header nav2 nav2"
-    "nav section aside"
-    "footer footer footer";
-  grid-template-rows: 80px 1fr 1fr;
-  grid-template-columns: 15% 1fr 18%;
-  grid-gap: 5px;
-  height: 100vh;
-  margin: 10px;
-} */
 
-header {
-  background: #aec9e2;
-  grid-area: header;
-}
-
-nav {
-  background: #44f5ae;
-  grid-area: nav;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "blue1"
-    "red1"
-    "yellow1"
-    "brown1";
-  /* 纵行要这样写跟横着的不一样 */
-  grid-row-gap: 20px;
-}
-
-nav2 {
-  background: #f08787;
-  grid-area: nav2;
-  /* z-index: -1; */
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr 1fr 1fr;
-  /* 均分成四分 */
-  grid-template-areas:
-    /* 之前是因为在html里面没有加，所以导致的bug。嵌套就这样加 直接写就行了 */
-    " bulue1  blue1 red1 yellow1 brown1";
-  grid-gap: 5px;
-  /* 设置间隔 */
-}
-
-section {
-  background: white;
-  grid-area: section;
-  z-index: -2;
-  /* 加入时要底层否则不显示 */
-}
-
-aside {
-  background: #c5ba49;
-  grid-area: aside;
-}
 
 img_text {
   height: 10cm;
@@ -272,18 +213,7 @@ img_text {
   font-size: 50px;
 }
 
-footer {
-  background: #707070;
-  grid-area: footer;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* 均分成四分 */
-  grid-template-areas:
-    /* 之前是因为在html里面没有加，所以导致的bug。嵌套就这样加 直接写就行了 */
-    "blue1 red1 yellow1 brown1";
-  grid-gap: 5px;
-  /* 设置间隔 */
-}
+
 
 blue1 {
   background-color: #4088cc;
@@ -310,14 +240,6 @@ img_text,
 red,
 yellow,
 brown,
-header,
-nav,
-section,
-aside,
-nav2,
-footer {
-  padding: 5px;
-}
 
 
 /* 文本框 */

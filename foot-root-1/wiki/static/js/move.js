@@ -24,17 +24,10 @@ function reveal2() {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
     var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
+    reveals[i].classList.add("active");
   }
 }
-
-window.addEventListener("scroll", reveal2, { passive: true });
-
+window.addEventListener("load", reveal2 ,{ passive: true });
 
 // 第三个
 function reveal3() {
