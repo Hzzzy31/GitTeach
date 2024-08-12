@@ -182,17 +182,17 @@ span {
 
 .slide-left {
   transform: translateX(0.5em);
-  animation: slideLeft 1.4s 2s forwards;
+  animation: slideLeft 1s 1s forwards;
 }
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1.4s 2.5s forwards;
+  animation: fadeIn 1s 1.5s forwards;
 }
 
 .slide-right {
   transform: translate(-0.5em);
-  animation: slideRight 1.4s 2s forwards;
+  animation: slideRight 1s 1s forwards;
 }
 
 /* 框框部分 grid */
@@ -522,6 +522,7 @@ td {
     height: 150px;
     overflow: hidden;
     transition: transform 0.9s, width 0.9s, height 0.9s;
+    border-radius: 1rem;
 
     & img {
       width: 100%;
@@ -564,6 +565,7 @@ div[data-pos='4'] {
     & .item {
       width: 200px;
       height: 150px;
+      border-radius: 1rem;
     }
 
     & div[data-pos='0'] {
