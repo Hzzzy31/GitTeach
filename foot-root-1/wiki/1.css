@@ -522,6 +522,7 @@ td {
     height: 150px;
     overflow: hidden;
     transition: transform 0.9s, width 0.9s, height 0.9s;
+    border-radius: 1rem;
 
     & img {
       width: 100%;
@@ -564,6 +565,7 @@ div[data-pos='4'] {
     & .item {
       width: 200px;
       height: 150px;
+      border-radius: 1rem;
     }
 
     & div[data-pos='0'] {
