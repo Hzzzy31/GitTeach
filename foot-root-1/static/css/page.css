@@ -1,0 +1,175 @@
+.pagecontainer{
+    position: relative;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-left: min(100px, 5vw);
+    margin-right: min(100px, 5vw);
+    margin-bottom: min(80px, 15vh);
+}
+.pagebody {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距以使内容不会紧贴边框 */
+    box-sizing: border-box; /* 包含内边距和边框在元素总宽度内 */
+}
+.pagenav {
+    height: 700px;
+    width: 15%;
+    max-width: 720px;
+    min-width: 350px;
+    position: sticky;
+    top: 18vh;
+    margin-right: max(25px, 2vw);
+    padding: 30px 20px 30px 10px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transform: translateX(-10%);
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距以使内容不会紧贴边框 */
+    box-sizing: border-box; /* 包含内边距和边框在元素总宽度内 */
+}
+.pagenav>div {
+    height: min(3vw, 53px);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.pagenav>div::before{
+    content:'';
+    width:0;
+    height:100%;
+    display:inline-block;
+    position:relative;
+    vertical-align:middle;
+}
+.pagenav>div>span{
+    font-family: Arlon;
+    color: #e92f00;
+    font-size: min(1.56vw, 24px);
+    letter-spacing: 2px;
+    vertical-align: middle;
+    transition: all 0.2s ease-out;
+    font-weight: bold; /* 添加这一行，设置字体加粗 */
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距以使内容不会紧贴边框 */
+    box-sizing: border-box; /* 包含内边距和边框在元素总宽度内 */
+}
+.pagenav>div>span:hover{
+    font-size: min(1.6vw, 26px);
+    transition: all 0.1s linear;
+}
+/*新增索引栏位图片*/
+.pagenav .image-container {
+    display: flex;
+    justify-content: center; /* 图片容器中的图片水平居中 */
+    align-items: center; /* 图片容器中的图片垂直居中 */
+    height: 100px; /* 图片容器的高度 */
+    width: 100px; /* 图片容器的宽度，确保为正方形 */
+    margin: 0 auto; /* 图片容器居中对齐 */
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距以使内容不会紧贴边框 */
+    box-sizing: border-box; /* 包含内边距和边框在元素总宽度内 */
+}
+
+.pagenav .image-container img {
+    max-width: 100%; /* 图片在容器内完全填充 */
+    max-height: 100%; /* 确保图片高度不超过容器 */
+    border-radius: 10px; /* 可选：给图片圆角 */
+}
+.pagecontent {
+    background: #e4af83;
+    padding: 30px 5%;
+    margin-right: 0;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1600px;
+    transform: translateY(10vh);
+    border-radius: 50px;
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距以使内容不会紧贴边框 */
+    box-sizing: border-box; /* 包含内边距和边框在元素总宽度内 */
+}
+.pagecontent .h{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+/* Katie! */
+.pagecontent .h-maomao{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 40px;
+}
+.pagecontent .h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3.07vw;
+    font-family: Arlon;
+    font-weight: 600;
+}
+
+/*hp页面css*/
+.hp-bg-image{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3000px;
+    /* background: url("../page/hp-bg.jpg"); */
+    background: url("https://bpic.588ku.com/back_origin_min_pic/21/08/19/7222e729f711256ccf9102b65d47a858.jpg!/fw/750/quality/99/unsharp/true/compress/true");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+}
+.subpage-bg-shelter{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.pagecontainer > .title2 {
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距，使得文本与边框之间有空间 */
+    display: inline-block; /* 使边框紧贴内容 */
+}
+.pagecontainer > .title2> span {
+    border: 3px solid black; /* 添加黑色边框 */
+    padding: 10px; /* 添加内边距，使得文本与边框之间有空间 */
+    display: inline-block; /* 使边框紧贴内容 */
+}
+.pagecontainer>.title2>span.style1{
+    font-family: Arlon;
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #f97407;
+    /* -webkit-text-stroke: 3px black; */
+}
+.pagecontainer>.title2>span.style2{
+    font-family: Arlon;
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #d0b8a4;
+    /* -webkit-text-stroke: 3px black; */
+}
+.pagecontainer>.title2>span.style3 {
+    display: block; /* 使这段文本独占一行 */
+    font-family: Arial;
+    font-size: 6vw; /* 较小的字体大小 */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #555555; /* 灰色文本 */
+    margin-top: 10px; /* 与上方文本之间的间距 */
+}
+
