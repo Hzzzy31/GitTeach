@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用自定义字体</title>
+    <style>
+        /* 定义字体 */
+        @font-face {
+            font-family: 'CustomFont'; /* 自定义字体名称 */
+            src: url('../wiki/static/wordstyle/Pattaya-Regular-2.ttf') format('truetype'); /* 字体文件路径 */
+        }
+
+        /* 应用字体 */
+        body {
+            font-family: 'CustomFont', sans-serif; /* 使用自定义字体 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Good morning</h1>
+    <p>Good morning</p>
+</body>
+</html>
