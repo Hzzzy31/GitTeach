@@ -187,7 +187,7 @@ body{
     margin-bottom: 10px;
     font-family: Arlon;
     font-weight: 600;
-    color: #4A65FA;
+    /* color: #4A65FA; */
 }
 .pagecontent .h3{
     text-align: left;

@@ -322,7 +322,7 @@ h1.retroshadow {
 h2 {
   color: #5b5be8;
   /* 小标题颜色 */
-  background-color: rgb(249, 247, 200);
+  /* background-color: rgb(249, 247, 200); */
   letter-spacing: 0.05em;
   text-shadow: 4px 4px 0px rgb(249, 247, 200), 7px 7px 0px rgba(0, 0, 0, 0.2);
   padding: 10px;
