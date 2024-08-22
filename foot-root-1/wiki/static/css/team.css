@@ -1,4 +1,37 @@
-/* 测试 */
+/* 个人介绍卡片 */
+  .introduction-card {
+    background-color: white;
+    padding: 20px;/* 内部的padding */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.466);
+    text-align: center;
+    transition: transform 0.3s ; /* 平滑过渡效果 */
+  }
+  .profile-pic {
+
+    width: 6cm; /* 可以根据头像大小调整 */
+    height: 6cm;
+    border-radius: 50%;
+    margin: 0 auto 20 /* 距20px，左右自动适应 */
+  }
+
+  @keyframes shake {
+    0% {
+      -webkit-box-shadow: 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55,0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55,0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55;
+              box-shadow: 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55,0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55,0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55, 0 0 #D9BC55;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px -1px #D9BC55, 2px -2px #D9BC55, 3px -3px #D9BC55, 4px -4px #D9BC55, 5px -5px #D9BC55, 6px -6px #D9BC55, 7px -7px #D9BC55, 8px -8px #D9BC55, 9px -9px #D9BC55, 10px -10px #D9BC55,11px -11px #D9BC55, 12px -12px #D9BC55, 13px -13px #D9BC55, 14px -14px #D9BC55, 15px -15px #D9BC55,16px -16px #D9BC55, 17px -17px #D9BC55, 18px -18px #D9BC55, 19px -19px #D9BC55;
+              box-shadow: 1px -1px #D9BC55, 2px -2px #D9BC55, 3px -3px #D9BC55, 4px -4px #D9BC55, 5px -5px #D9BC55, 6px -6px #D9BC55, 7px -7px #D9BC55, 8px -8px #D9BC55, 9px -9px #D9BC55, 10px -10px #D9BC55,11px -11px #D9BC55, 12px -12px #D9BC55, 13px -13px #D9BC55, 14px -14px #D9BC55, 15px -15px #D9BC55,16px -16px #D9BC55, 17px -17px #D9BC55, 18px -18px #D9BC55, 19px -19px #D9BC55;
+      -webkit-transform: translateX(-19px) translateY(19px);
+              transform: translateX(-19px) translateY(19px);
+    }
+  }
+  
+
+/* 测试 方案一 */
 /*
 * Scut, a collection of Sass utilities
 * to ease and improve our implementations of common style-code patterns.
@@ -31,7 +64,7 @@
   }
 }
 .team-grid {
-  margin: 0;
+  margin:70px;
   text-align: center;
   /* *zoom: 1; */
 }
@@ -74,16 +107,10 @@
 .team-grid__member {
   position: relative;
   overflow: hidden;
-  width: 9.8cm;/* 调整大小，十厘米一下是三个一排，以上是两个一排 */
+  width: 8cm;/* 调整大小，十厘米一下是三个一排，以上是两个一排 */
 }
 
-.team-grid__member img {
-  width: 100%;
-  height: auto;
-  border: 8px solid #fff;
-  box-sizing: border-box;
-  display: block;
-}
+
 
 .member__info {
   color: #fff;
@@ -95,15 +122,15 @@
   left: 1rem;
   right: 1rem;
   bottom: 1rem;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(24, 122, 52, 0.85);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
 }
 
 .member__name {
   color: #D9BC55;
-  font-size: 1.5rem;
+  font-size: 1.7rem;/* 角色大小 */
   letter-spacing: 1px;
   line-height: 1.2rem;
   margin-bottom: 0;
@@ -112,17 +139,19 @@
 
 .member__title {
   margin-bottom: 0.75rem;
-  font-size: 0.9rem;/* 段落大小 */
+  font-size: 1.3rem;/* 段落大小 */
   font-weight: normal;
-  line-height: 1rem;
+  line-height: 1.5rem;
   padding: 0 1.5rem;
   text-align: left;/* 整体靠右避免空格 */
 }
 
 
-
 .team-grid__member:hover .member__info {
+  animation: shake 1.2s;
+  Animation-fill-mode: forwards;
   opacity: 1;
+  
 }
 
 .member__info:before {
@@ -140,7 +169,7 @@
 /* 测试 */
 
 
-/* Our Team
+/* Our Team 方案二
 -------------------------------------------------------*/
 
 .our-team .team-row {
@@ -164,7 +193,8 @@
     overflow: hidden;
     width: 100%;
   }
-  
+
+
   .team-member,
   .team-img {
     position: relative;
@@ -173,7 +203,7 @@
   
   .team-title {
     margin: 30px 0 7px;
-    font-size: 30px;
+    font-size: 30px;/* 一类型照片下面的名字 */
   }
   
   .overlay {
@@ -206,7 +236,7 @@
   
   .team-details pt {
     color: #fff;
-    font-size: 0.7cm;
+    font-size: 0.4cm;
   }
 
   .team-details pt2 {
