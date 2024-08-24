@@ -84,3 +84,4 @@ function reveal5() {
 }
 
 window.addEventListener("scroll", reveal5, { passive: true });
+
