@@ -1,0 +1,295 @@
+@font-face {
+    font-family: AlibabaPuHuiTi;
+    src: url(https://static.igem.wiki/teams/4594/wiki/alibabafont.ttf);
+}
+@font-face {
+    font-family: Arlon;
+    src: url(https://static.igem.wiki/teams/4594/wiki/arlonfont.otf);
+}
+.homepage-holder{
+    /* it holds and expands the whole homepage */
+    margin: 0 auto;
+    width: max(100%, 1300px);
+    /*上科大幕布长度为固定长度*/
+    height: 14500px;
+    background-color: rgb(245, 139, 74);
+    /* the following codes make all boxes placed in center */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+}
+
+/*下列所有样式中，务必加入position：absolute样式*/
+/*在此主页文件z-index中，背景遮罩层为0，背景层为-1，导航层为10，其余元素位于区域中间*/
+
+
+/* for canvas */
+#tutorial{
+    position: absolute;
+    z-index: 5;
+    top: 700px;
+}
+
+/* shelter for background1 */
+.shelter-for-bg1{
+    position: absolute;
+    margin: 0 auto;
+    top: 980px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 30px 20px black;
+    background-color: black;
+    z-index: 6;
+}
+/*整个页面的副标题和文本字体样式*/
+.homepage-subtitle-style{
+    margin: 0 auto;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: Arlon;
+    font-size: 40.625px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.homepage-contents-style{
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: AlibabaPuHuiTi;
+    font-size: 20.313px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*大部分图片的层数位于页面的第九层*/
+.homepage-elements{
+    /* not for backgrounds!! */
+    position: absolute;
+    z-index: 9;
+}
+/*将小元素图片设置为第十层，模拟大肠上感染体*/
+.homepage-elements2{
+    /* not for backgrounds!! */
+    position: absolute;
+    z-index: 10;
+}
+
+/* main title style: */
+.homepage-maintitle{
+    top: 260px;
+    width: 1300px;
+    height: 400px;
+}
+.homepage-maintitle-name{
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 1300px;
+    height: 200px;
+    color: #402811;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    font-family: Arlon;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+
+/*主界面图片格式*/
+
+.homepage-content-img1{
+    top: 700px;
+    transform: translateX(-75%);
+    width: 400px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/wiki/static/page/home-page2.jpg"), 50% / cover no-repeat;
+    opacity: 1;
+    /* transition: all 0.5s linear; */
+}
+.homepage-content-img2{
+    top: 1258px;
+    transform: translateX(-60%);
+    width: 460.74px;
+    height: 336.979px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/wiki/static/page/home-page2.jpg"), 40% no-repeat;
+    opacity: 0;
+    /* transition: all 0.5s linear; */
+}
+.homepage-content-img3{
+    top: 1900px;
+    width: 1062.833px;
+    height: 304.688px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    /* border: 0.677px solid #FFF; */
+    background: url("/foot-root-1/wiki/static/page/changdao.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: black; */
+}
+.homepage-content-img4{
+    top: 1900px;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    /* border: 0.677px solid #FFF; */
+    background: url("/foot-root-1/wiki/static/page/bingjun.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: black; */
+}
+/*主界面文本框样式*/
+
+.homepage-content1{
+    top: 700px;
+    transform: translateX(28%);
+    width: 640px;
+    height: 450px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 定义svg动画 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#homepage-star {
+    animation: rotate 4s linear infinite; /* 应用旋转动画，4秒钟完成一圈，线性旋转，无限循环 */
+    width: 150px; /* 设置SVG的宽度 */
+    height: 150px; /* 设置SVG的高度 */
+    position: absolute; /* 使用绝对定位 */
+    top: 1380px; /* 将元素定位到容器的顶部 */
+    right: 100px; /* 将元素定位到容器的右侧 */
+}
+#homepage-star1 {
+    animation: rotate 4s linear infinite; /* 应用旋转动画，4秒钟完成一圈，线性旋转，无限循环 */
+    width: 150px; /* 设置SVG的宽度 */
+    height: 150px; /* 设置SVG的高度 */
+    position: absolute; /* 使用绝对定位 */
+    top: 1380px; /* 将元素定位到容器的顶部 */
+    left: 100px; /* 将元素定位到容器的右侧 */
+}
+#homepage-star2 {
+    animation: rotate 4s linear infinite; /* 应用旋转动画，4秒钟完成一圈，线性旋转，无限循环 */
+    width: 150px; /* 设置SVG的宽度 */
+    height: 150px; /* 设置SVG的高度 */
+    position: absolute; /* 使用绝对定位 */
+    top: 880px; /* 将元素定位到容器的顶部 */
+    left: 50px; /* 将元素定位到容器的右侧 */
+}
+#homepage-star3 {
+    animation: rotate 4s linear infinite; /* 应用旋转动画，4秒钟完成一圈，线性旋转，无限循环 */
+    width: 150px; /* 设置SVG的宽度 */
+    height: 150px; /* 设置SVG的高度 */
+    position: absolute; /* 使用绝对定位 */
+    top: 1180px; /* 将元素定位到容器的顶部 */
+    right: 50px; /* 将元素定位到容器的右侧 */
+}
+#homepage-light {
+    width: 200px; /* 设置SVG的宽度 */
+    height: 200px; /* 设置SVG的高度 */
+    position: absolute; /* 使用绝对定位 */
+    top: 1680px; /* 将元素定位到容器的顶部 */
+     /* 将元素的中心移到定位点 */
+    
+}
+/*闪烁动画效果*/
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#homepage-warning {
+    width: 74px; /* 设置SVG的宽度 */
+    height: 50px; /* 设置SVG的高度 */
+    position: absolute; /* 使用绝对定位 */
+    top: 1680px; /* 将元素定位到容器的顶部 */
+    right: 800px; /* 将元素定位到容器的右侧 */
+    animation: blink 1.5s infinite;
+}
+
+
+/*定义交互性动画*/
+.slide-in-bck-left1 {
+    -webkit-animation: slide-in-bck-left 0.6s;
+            animation: slide-in-bck-left 0.6s;
+}
+@keyframes slide-in-bck-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
