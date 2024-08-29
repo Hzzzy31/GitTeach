@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加载动画</title>
+
+    <style>
+        /* #loading-page {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+        } */  /* 有图片时不能加这个 适当时候加与不加 跟csdn的帖子对比 有时不加 */
+    </style>
+
+</head>
+
+<body>
+    <div class="continer">
+        <img src="https://picsum.photos/1250/650" alt="">
+    </div>
+    
+
+
+    
+    <script>
+
+
+        document.onreadystatechange = closeLoading 
+        function closeLoading() {
+            if (document.readyState == "complete")
+                setTimeout(() => {
+                    document.getElementById('loading-page').style.visibility = "hidden";
+                }, 500); //每次加载完成后延时 0.5s 隐藏 loading page
+            else { document.getElementById('loading-page').style.visibility = "visible"; }
+        }
+
+    </script>
+
+
+    <div id="loading-page" style="visibility: hidden;background-color: white;">
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>SVG加载动画</title>
+            <style>
+                .loader {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    margin: 50px auto;
+                }
+
+                .loader circle {
+                    fill: none;
+                    stroke: #333;
+                    stroke-width: 10;
+                    transform-origin: center;
+                    animation: dash 2s ease-in-out infinite;
+                }
+
+                @keyframes dash {
+                    from {
+                        stroke-dasharray: 1, 150;
+                        stroke-dashoffset: 0;
+                    }
+
+                    to {
+                        stroke-dasharray: 150, 150;
+                        stroke-dashoffset: -125;
+                    }
+                }
+            </style>
+        </head>
+
+        <body>
+
+            <div class="loader">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40"></circle>
+                </svg>
+            </div>
+
+        </body>
+
+        </html>
+
+
+
+
+        <!--         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://static.igem.wiki/teams/4630/wiki/webpage/favicon-diffuse-gradient.ico">
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+
+        <title> | WHU-China - iGEM 2023</title>
+
+
+
+        <div class="loading">
+            <div class="loading-svg">
+
+                <div><img class="loading-1" src="https://static.igem.wiki/teams/4630/wiki/webpage/loading/1.svg"
+                        height="100%"></div>
+                <div><img class="loading-2" src="https://static.igem.wiki/teams/4630/wiki/webpage/loading/2.svg"
+                        height="100%"></div>
+                <div><img class="loading-3" src="https://static.igem.wiki/teams/4630/wiki/webpage/loading/3.svg"
+                        height="100%"></div>
+                <div><img class="loading-4" src="https://static.igem.wiki/teams/4630/wiki/webpage/loading/4.svg"
+                        height="100%"></div>
+            </div>
+
+            <div class="loading-text">
+                <span style="color: #c696ff;font-size: 30px;">LOADING <span style="font-size: 40px"><span class="dot-1"
+                            style="color: #c696ff">.</span><span class="dot-2" style="color: #fb96ff">.</span><span
+                            class="dot-3" style="color:#ffa3d7">.</span></span></span>
+            </div>
+        </div> -->
+
+    </div>
+</body>
+
+</html>

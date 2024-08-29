@@ -29,6 +29,76 @@
 </head>
 
 <body>
+    <script>
+
+
+        document.onreadystatechange = closeLoading 
+        function closeLoading() {
+            if (document.readyState == "complete")
+                setTimeout(() => {
+                    document.getElementById('loading-page').style.visibility = "hidden";
+                }, 500); //每次加载完成后延时 0.5s 隐藏 loading page
+            else { document.getElementById('loading-page').style.visibility = "visible"; }
+        }
+
+    </script>
+
+
+    <div id="loading-page" style="visibility: hidden;background-color: white;">
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>SVG加载动画</title>
+            <style>
+                .loader {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    margin: 50px auto;
+                }
+
+                .loader circle {
+                    fill: none;
+                    stroke: #333;
+                    stroke-width: 10;
+                    transform-origin: center;
+                    animation: dash 2s ease-in-out infinite;
+                }
+
+                @keyframes dash {
+                    from {
+                        stroke-dasharray: 1, 150;
+                        stroke-dashoffset: 0;
+                    }
+
+                    to {
+                        stroke-dasharray: 150, 150;
+                        stroke-dashoffset: -125;
+                    }
+                }
+            </style>
+        </head>
+
+        <body>
+
+            <div class="loader">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40"></circle>
+                </svg>
+            </div>
+
+        </body>
+
+        </html>
+
+
+
+
+
+    </div>
     <!-- 导航栏 -->
     <nav class="navbar fixed-top" style="color:white;">
         <div>
