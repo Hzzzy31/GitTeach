@@ -21,14 +21,107 @@
   <link href="static\css\navbar.css" rel="stylesheet">
   <link rel="stylesheet" href="static\css\move.css" type="text/css">
   <script type="text/javascript" src="static\js\move.js"></script>
+  <!-- <link rel="stylesheet" href="static\css\team.css" type="text/css"> -->
   <link rel="stylesheet" type="text/css" href="static\css\1.css">
   <script type="text/javascript" src="static\js\1.js"></script>
   <!-- zrz 添加引用 -->
 </head>
 
 <body>
+
+  <script>
+
+
+    document.onreadystatechange = closeLoading
+    function closeLoading() {
+      if (document.readyState == "complete")
+        setTimeout(() => {
+          document.getElementById('loading-page').style.visibility = "hidden";
+        }, 500); //每次加载完成后延时 0.5s 隐藏 loading page
+      else { document.getElementById('loading-page').style.visibility = "visible"; }
+    }
+
+  </script>
+
+
+  <div id="loading-page" style="visibility: hidden;background-color: white;height: 100%;display: flex;align-items: center;z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>旋转的圆形图片</title>
+      <style>
+        /* 容器使用Flexbox居中对齐子元素 */
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* 水平居中 */
+          justify-content: center;
+          /* 垂直居中 */
+          height: 100vh;
+          /* 容器高度占满视口高度 */
+        }
+
+        .rotating-image {
+          border-radius: 50%;
+          animation: rotation 5s infinite linear;
+          margin-bottom: 20px;
+          /* 图片与文字之间的间距 */
+        }
+
+        @keyframes rotation {
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        /* 为文字添加样式，如需要 */
+        .loading-text {
+          font-size: 50px;
+          /* 根据需要调整文字大小 */
+          color: #0f0d00;
+          /* 文字颜色 */
+        }
+      </style>
+    </head>
+
+    <body>
+
+      <div class="container">
+        <div class="rotating-image">
+          <img src="static/img/xiaohui.svg" alt="旋转的图片">
+        </div>
+        <div class="loading-text">
+          loading...
+        </div>
+      </div>
+
+    </body>
+
+    </html>
+
+
+
+
+
+  </div>
+
+
   <!-- 导航栏 -->
-    <nav class="navbar fixed-top" style="color:white;">
+  <nav class="navbar fixed-top" style="color:white;">
     <div>
       <a href="homepage.html">
         <img class="logo" src="https://s0.60logo.com/uploads/items/images/soft/180131/lzu.svg">
@@ -141,140 +234,140 @@
         </div>
       </div>
       <!-- <div class="pagecontent"> -->
-        <div id="circle">
-          <h1 class='retroshadow' style="font-size: 70px"><span class="accent"><span class="slide-left">I</span><span
-                class="fade-in">GE</span><span class="slide-right">M</span></span> <span class="slide-right">project
-              design</span>
-          </h1>
-          <h2>小标题</h1>
-            <p>
-              We ingest up to 5 grams of microplastics every week<sup>1</sup>. A large part of the microplastics we
-              consume
-              comes from eating food contaminated by plastics used in agriculture<sup>2,3</sup>.Microplastics are small
-              plastic particles derived from non-degradable plastics that mechanically break down into smaller parts,
-              which
-              causes microplastic pollution<sup>4</sup>.This breakdown into microplastics, as well as even smaller
-              nanoplastics, allows for the uptake of these particles into cells<sup>5,6</sup>. In soil, microplastics
-              also
-              act
-              as a vector for organic pollutants like pesticides and industrial chemicals, as well as for heavy metals
-              such
-              as
-              cadmium, chromium, and copper. These compounds adsorb to the surface of the microplastics and in turn are
-              taken
-              up by plants (Figure 1). When these plants are eaten, this leads to the accumulation of microplastics,
-              heavy
-              metals, and toxic compounds in the human body. To date, microplastic accumulation has been found in
-              essentially
-              all human tissues, in the bloodstream, and in fetuses<sup>7</sup>. Recent studies have already found a
-              range
-              of
-              adverse effects on the respiratory tract, cardiac health, neurological health, mitochondrial health, and
-              on
-              oxidative stress<sup>8,9</sup>.
-            </p>
-            <br>
-            <div class="img-container">
-              <img
-                src="https://ts1.cn.mm.bing.net/th/id/R-C.57384e4c2dd256a755578f00845e60af?rik=uy9%2bvT4%2b7Rur%2fA&riu=http%3a%2f%2fimg06file.tooopen.com%2fimages%2f20171224%2ftooopen_sy_231021357463.jpg&ehk=whpCWn%2byPBvtGi1%2boY1sEBq%2frEUaP6w2N5bnBQsLWdo%3d&risl=&pid=ImgRaw&r=0"
-                alt>
-            </div>
-            <br> <br> <br>
-            <table>
-              <caption>数据表</caption>
-              <thead>
-                <tr>
-                  <th>One</th>
-                  <th>Two</th>
-                  <th>Three</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="--zi: 0">
-                  <td data-title="One">Cell 1</td>
-                  <td data-title="Two">Cell 2</td>
-                  <td data-title="Three">Cell 3</td>
-                </tr>
-                <tr style="--zi: -1">
-                  <td data-title="One">Cell 1</td>
-                  <td data-title="Two">Cell 2</td>
-                  <td data-title="Three">Cell 3</td>
-                </tr>
-                <tr style="--zi: -2">
-                  <td data-title="One">Cell 1</td>
-                  <td data-title="Two">Cell 2</td>
-                  <td data-title="Three">Cell 3</td>
-                </tr>
-                <tr style="--zi: -3">
-                  <td data-title="One">Cell 1</td>
-                  <td data-title="Two">Cell 2</td>
-                  <td data-title="Three">Cell 3</td>
-                </tr>
-              </tbody>
-            </table>
-            <br>
+      <div id="circle">
+        <h1 class='retroshadow' style="font-size: 70px"><span class="accent"><span class="slide-left">I</span><span
+              class="fade-in">GE</span><span class="slide-right">M</span></span> <span class="slide-right">project
+            design</span>
+        </h1>
+        <h2>小标题</h1>
+          <p>
+            We ingest up to 5 grams of microplastics every week<sup>1</sup>. A large part of the microplastics we
+            consume
+            comes from eating food contaminated by plastics used in agriculture<sup>2,3</sup>.Microplastics are small
+            plastic particles derived from non-degradable plastics that mechanically break down into smaller parts,
+            which
+            causes microplastic pollution<sup>4</sup>.This breakdown into microplastics, as well as even smaller
+            nanoplastics, allows for the uptake of these particles into cells<sup>5,6</sup>. In soil, microplastics
+            also
+            act
+            as a vector for organic pollutants like pesticides and industrial chemicals, as well as for heavy metals
+            such
+            as
+            cadmium, chromium, and copper. These compounds adsorb to the surface of the microplastics and in turn are
+            taken
+            up by plants (Figure 1). When these plants are eaten, this leads to the accumulation of microplastics,
+            heavy
+            metals, and toxic compounds in the human body. To date, microplastic accumulation has been found in
+            essentially
+            all human tissues, in the bloodstream, and in fetuses<sup>7</sup>. Recent studies have already found a
+            range
+            of
+            adverse effects on the respiratory tract, cardiac health, neurological health, mitochondrial health, and
+            on
+            oxidative stress<sup>8,9</sup>.
+          </p>
+          <br>
+          <div class="img-container">
+            <img
+              src="https://ts1.cn.mm.bing.net/th/id/R-C.57384e4c2dd256a755578f00845e60af?rik=uy9%2bvT4%2b7Rur%2fA&riu=http%3a%2f%2fimg06file.tooopen.com%2fimages%2f20171224%2ftooopen_sy_231021357463.jpg&ehk=whpCWn%2byPBvtGi1%2boY1sEBq%2frEUaP6w2N5bnBQsLWdo%3d&risl=&pid=ImgRaw&r=0"
+              alt>
+          </div>
+          <br> <br> <br>
+          <table>
+            <caption>数据表</caption>
+            <thead>
+              <tr>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="--zi: 0">
+                <td data-title="One">Cell 1</td>
+                <td data-title="Two">Cell 2</td>
+                <td data-title="Three">Cell 3</td>
+              </tr>
+              <tr style="--zi: -1">
+                <td data-title="One">Cell 1</td>
+                <td data-title="Two">Cell 2</td>
+                <td data-title="Three">Cell 3</td>
+              </tr>
+              <tr style="--zi: -2">
+                <td data-title="One">Cell 1</td>
+                <td data-title="Two">Cell 2</td>
+                <td data-title="Three">Cell 3</td>
+              </tr>
+              <tr style="--zi: -3">
+                <td data-title="One">Cell 1</td>
+                <td data-title="Two">Cell 2</td>
+                <td data-title="Three">Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
 
 
-            <img_text>
-              <blue1>照片</blue1>
-              <red1>文字叙述</red1>
-            </img_text>
-            <br>
-            <div style=" text-align: center;
+          <img_text>
+            <blue1>照片</blue1>
+            <red1>文字叙述</red1>
+          </img_text>
+          <br>
+          <div style=" text-align: center;
                       font-family:'Courier New', Courier, monospace;
                       font-size: 30px;">
-              view more ->
-            </div>
-            <br>
-            <br>
-            <img_text>
-              <blue1>照片1</blue1>
-              <red1>照片2</red1>
-            </img_text>
-            <br>
-            <div style=" text-align: center;
+            view more ->
+          </div>
+          <br>
+          <br>
+          <img_text>
+            <blue1>照片1</blue1>
+            <red1>照片2</red1>
+          </img_text>
+          <br>
+          <div style=" text-align: center;
                       font-family:'Courier New', Courier, monospace;
                       font-size: 30px;">
-              view more - > (动效)
-            </div>
-            <br> <br> <br>
-            <!-- 画框 -->
-            <div style=" text-align: center;
+            view more - > (动效)
+          </div>
+          <br> <br> <br>
+          <!-- 画框 -->
+          <div style=" text-align: center;
                       font-family:'Courier New', Courier, monospace;
                       font-size: 30px;">
-              四张照片展示 点击切换图片
+            四张照片展示 点击切换图片
+          </div>
+          <main class='gallery'>
+            <div class='item' data-pos='0'><img
+                src='https://ts1.cn.mm.bing.net/th/id/R-C.987f582c510be58755c4933cda68d525?rik=C0D21hJDYvXosw&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fwallpaper%2f1305%2f16%2fc4%2f20990657_1368686545122.jpg&ehk=netN2qzcCVS4ALUQfDOwxAwFcy41oxC%2b0xTFvOYy5ds%3d&risl=&pid=ImgRaw&r=0'>
             </div>
-            <main class='gallery'>
-              <div class='item' data-pos='0'><img
-                  src='https://ts1.cn.mm.bing.net/th/id/R-C.987f582c510be58755c4933cda68d525?rik=C0D21hJDYvXosw&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fwallpaper%2f1305%2f16%2fc4%2f20990657_1368686545122.jpg&ehk=netN2qzcCVS4ALUQfDOwxAwFcy41oxC%2b0xTFvOYy5ds%3d&risl=&pid=ImgRaw&r=0'>
-              </div>
-              <div class='item' data-pos='1'><img
-                  src='https://tse2-mm.cn.bing.net/th/id/OIP-C.4SPZVrcvZ-Tunx4G4FFtRAAAAA?rs=1&pid=ImgDetMain'>
-              </div>
-              <div class='item' data-pos='2'><img
-                  src='https://tse3-mm.cn.bing.net/th/id/OIP-C.g9UbVfyVZX-SfD09JcYr5QHaEK?rs=1&pid=ImgDetMain'>
-              </div>
-              <div class='item' data-pos='3'><img
-                  src='https://img.zcool.cn/community/01e4315542ab990000019ae99f4ef0.jpg@1280w_1l_2o_100sh.jpg'>
-              </div>
-              <div class='item' data-pos='4'><img
-                  src='https://tse4-mm.cn.bing.net/th/id/OIP-C.PkHbcOW185f5NBc-wE9lzgHaEo?rs=1&pid=ImgDetMain'>
-              </div>
-            </main>
-            <br>
-            <!--文字动效 -->
-            <div class="container">
-              <div class="typing" style="color: rgb(26, 176, 126);">
-              </div>
+            <div class='item' data-pos='1'><img
+                src='https://tse2-mm.cn.bing.net/th/id/OIP-C.4SPZVrcvZ-Tunx4G4FFtRAAAAA?rs=1&pid=ImgDetMain'>
             </div>
-            <br><br><br>
-            <div style="background-color: black;width: 3cm;height: 3cm;color: aqua;font-size: 0.6cm;margin-left: 20cm;">
-              back to the top（回到顶部按钮）
+            <div class='item' data-pos='2'><img
+                src='https://tse3-mm.cn.bing.net/th/id/OIP-C.g9UbVfyVZX-SfD09JcYr5QHaEK?rs=1&pid=ImgDetMain'>
             </div>
-        </div>
-
+            <div class='item' data-pos='3'><img
+                src='https://img.zcool.cn/community/01e4315542ab990000019ae99f4ef0.jpg@1280w_1l_2o_100sh.jpg'>
+            </div>
+            <div class='item' data-pos='4'><img
+                src='https://tse4-mm.cn.bing.net/th/id/OIP-C.PkHbcOW185f5NBc-wE9lzgHaEo?rs=1&pid=ImgDetMain'>
+            </div>
+          </main>
+          <br>
+          <!--文字动效 -->
+          <div class="container">
+            <div class="typing" style="color: rgb(26, 176, 126);">
+            </div>
+          </div>
+          <br><br><br>
+          <div style="background-color: black;width: 3cm;height: 3cm;color: aqua;font-size: 0.6cm;margin-left: 20cm;">
+            back to the top（回到顶部按钮）
+          </div>
       </div>
+
     </div>
+  </div>
 
   <footer class="text-white bg-dark">
     <div class="container py-4 py-lg-5" style="margin-top: -64px;">
@@ -321,10 +414,10 @@
       </div>
       <hr>
       <div class="d-flex justify-content-between align-items-center pt-3" style="margin-top: -12px;">
-        <p class="mb-0">Contact Us: 
+        <p class="mb-0">Contact Us:
           <a href="https://space.bilibili.com/3546732520540952" target="_blank" class="linktype">兰州大学 Bilibili 账户</a>
         </p>
-      
+
         <ul class="list-inline mb-0">
           <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
               fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
@@ -346,7 +439,7 @@
             </svg></li>
         </ul>
       </div>
-      <p class="mb-0">The repository used to create this website is available at: 
+      <p class="mb-0">The repository used to create this website is available at:
         <a href="https://gitlab.igem.org/2024/lzu-china" target="_blank" class="linktype">兰州大学 Gitlab 账户</a>
       </p>
     </div>
