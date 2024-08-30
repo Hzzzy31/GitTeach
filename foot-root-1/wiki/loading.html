@@ -1,0 +1,134 @@
+<script>
+
+
+    document.onreadystatechange = closeLoading
+    function closeLoading() {
+        if (document.readyState == "complete")
+            setTimeout(() => {
+                // document.getElementById('loading-page').style.visibility = "hidden";
+            }, 500); //每次加载完成后延时 0.5s 隐藏 loading page
+        else { document.getElementById('loading-page').style.visibility = "visible"; }
+    }
+
+</script>
+
+
+<div id="loading-page" style="visibility: hidden;background-color: white;
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+z-index: 9999;">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>旋转的圆形图片</title>
+        <style>
+            /* 容器使用Flexbox居中对齐子元素 */
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* 水平居中 */
+                justify-content: center;
+                /* 垂直居中 */
+                height: 100vh; /* 容器高度占满视口高度 */
+            }
+
+            .rotating-image {
+                position: relative; /* 确保可以包含绝对定位的子元素 */
+                border-radius: 50%;
+                animation: rotation 1.5s infinite linear;
+                margin-bottom: 30px;
+                /* 图片与文字之间的间距 */
+            }
+            .overlay-image {
+                animation: circle1 3s infinite linear;
+            }
+            @keyframes circle1 {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            @keyframes rotation {
+                from {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    -webkit-transform-origin: center center;
+                    transform-origin: center center;
+                    -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+                }
+
+                10% {
+                    -webkit-transform: scale(0.80);
+                    transform: scale(0.80);
+                    -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+                }
+
+                17% {
+                    -webkit-transform: scale(0.98);
+                    transform: scale(0.98);
+                    -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+                }
+
+                33% {
+                    -webkit-transform: scale(0.70);
+                    transform: scale(0.70);
+                    -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+                }
+
+                45% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+                }
+            }
+
+            /* 为文字添加样式，如需要 */
+            .loading-text {
+                font-size: 30px;
+                /* 根据需要调整文字大小 */
+                color: #0f0d00;
+                /* 文字颜色 */
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="rotating-image">
+                <img height="200px" src="static/img/xiaohui.svg" alt="旋转的图片">
+            </div>
+
+            <!-- 小图片 -->
+            <div class="overlay-image" style="/* position: absolute; */">
+                <img src="static/img/xiaohui.svg" alt="小图片" style="width: 200px; height: auto;">
+            </div>
+
+            <div class="loading-text">
+                loading...
+            </div>
+        </div>
+
+    </body>
+
+    </html>
+
+
+
+
+
+</div>
