@@ -110,7 +110,7 @@
     height: 450px;
     flex-shrink: 0;
     border-radius: 33.854px;
-    background: url("/foot-root-1/wiki/static/page/home-page2.jpg"), 50% / cover no-repeat;
+    background: url("/foot-root-1/static/img/home-page2.jpg"), 50% / cover no-repeat;
     opacity: 1;
     /* transition: all 0.5s linear; */
 }
@@ -121,7 +121,7 @@
     height: 336.979px;
     flex-shrink: 0;
     border-radius: 33.854px;
-    background: url("/foot-root-1/wiki/static/page/home-page2.jpg"), 40% no-repeat;
+    background: url("/foot-root-1/static/img/home-page2.jpg"), 40% no-repeat;
     opacity: 0;
     /* transition: all 0.5s linear; */
 }
@@ -132,7 +132,7 @@
     flex-shrink: 0;
     border-radius: 33.854px;
     /* border: 0.677px solid #FFF; */
-    background: url("/foot-root-1/wiki/static/page/changdao.jpg");
+    background: url("/foot-root-1/static/img/changdao.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
@@ -145,7 +145,7 @@
     flex-shrink: 0;
     border-radius: 33.854px;
     /* border: 0.677px solid #FFF; */
-    background: url("/foot-root-1/wiki/static/page/bingjun.jpg");
+    background: url("/foot-root-1/static/img/bingjun.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;

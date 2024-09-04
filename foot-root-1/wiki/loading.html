@@ -5,7 +5,7 @@
     function closeLoading() {
         if (document.readyState == "complete")
             setTimeout(() => {
-                // document.getElementById('loading-page').style.visibility = "hidden";
+                document.getElementById('loading-page').style.visibility = "hidden";
             }, 500); //每次加载完成后延时 0.5s 隐藏 loading page
         else { document.getElementById('loading-page').style.visibility = "visible"; }
     }
@@ -110,12 +110,12 @@ z-index: 9999;">
 
         <div class="container">
             <div class="rotating-image">
-                <img height="200px" src="static/img/xiaohui.svg" alt="旋转的图片">
+                <img height="200px" src="..\static\svg\xiaohui.svg" alt="旋转的图片">
             </div>
 
             <!-- 小图片 -->
             <div class="overlay-image" style="position: absolute;top: 35.9%;">
-                <img src="static/img/xiaohui.svg" alt="小图片" style="width: 134px; height: auto;">
+                <img src="..\static\svg\xiaohui.svg" alt="小图片" style="width: 134px; height: auto;">
             </div>
 
             <div class="loading-text">

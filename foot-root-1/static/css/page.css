@@ -75,7 +75,7 @@
     height: 100px; /* 图片容器的高度 */
     width: 100px; /* 图片容器的宽度，确保为正方形 */
     margin: 0 auto; /* 图片容器居中对齐 */
-    background-image: url("../page/hp-na-lg.jpg");
+    background-image: url("/foot-root-1/static/img/hp-na-lg.jpg");
     background-size: cover; /* 确保图片覆盖整个容器 */
     background-position: center; /* 图片在容器中居中 */
     background-repeat: no-repeat; /* 防止图片重复 */
@@ -128,7 +128,7 @@
     /*大部分网页长宽比为16：9*/
     height: 3000px;
     /* background: url("../page/hp-bg.jpg"); */
-    background: url("../page/hp-bg.jpg");
+    background: url("../img/hp-bg.jpg");
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
