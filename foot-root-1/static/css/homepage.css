@@ -12,7 +12,7 @@
     width: max(100%, 1300px);
     /*上科大幕布长度为固定长度*/
     height: 14500px;
-    background-color: rgb(245, 139, 74);
+    background-color: rgb(210, 158, 234);
     /* the following codes make all boxes placed in center */
     display: flex;
     flex-wrap: wrap;
@@ -47,23 +47,41 @@
     margin: 0 auto;
     text-align: left;
     color: #F8F0E8;
-    font-family: Arlon;
+    font-family: 'Arlon', Arial, sans-serif;
     font-size: 40.625px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    font-variant-ligatures: none; /* 禁用连字 */
+}
+
+.homepage-subtitle-style2{
+    margin: 0 auto;
+    text-align: left;
+    color: #F8F0E8;
+    font-family: 'Arlon', Arial, sans-serif;
+    font-size: 30.625px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-variant-ligatures: none; /* 禁用连字 */
 }
 
 .homepage-contents-style{
     margin: 0 auto;
-    margin-top: 20px;
-    text-align: left;
+    margin-top: 15px;
+    text-align: justify; /* 两端对齐 */
+    text-justify: inter-word;
+    hyphens: auto;
+    word-spacing: 0.05em;
+    /* text-align: left;左侧对齐 */
     color: #F8F0E8;
     font-family: AlibabaPuHuiTi;
-    font-size: 20.313px;
+    font-size: 30.313px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    
 }
 
 /*大部分图片的层数位于页面的第九层*/
@@ -94,7 +112,7 @@
     text-align: center;
     font-feature-settings: 'liga' off;
     font-family: Arlon;
-    font-size: 80px;
+    font-size: 100px;
     font-style: normal;
     font-weight: 600;
 }
@@ -112,70 +130,297 @@
     border-radius: 33.854px;
     background: url("/foot-root-1/static/img/home-page2.jpg"), 50% / cover no-repeat;
     opacity: 1;
-    /* transition: all 0.5s linear; */
+    transition: all 0.5s linear; /*在0.5秒内线性变化*/
 }
+
+
 .homepage-content-img2{
-    top: 1258px;
-    transform: translateX(-60%);
-    width: 460.74px;
-    height: 336.979px;
+    top: 600px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-53%);
+    width: 1440px;
+    height:1000px;
     flex-shrink: 0;
     border-radius: 33.854px;
-    background: url("/foot-root-1/static/img/home-page2.jpg"), 40% no-repeat;
+    background: url("/foot-root-1/static/img/home2.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
     opacity: 0;
     /* transition: all 0.5s linear; */
 }
+
 .homepage-content-img3{
-    top: 1900px;
-    width: 1062.833px;
-    height: 304.688px;
+    top: 1630px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-115%);
+    width: 524px;
+    height:398px;
     flex-shrink: 0;
     border-radius: 33.854px;
-    /* border: 0.677px solid #FFF; */
-    background: url("/foot-root-1/static/img/changdao.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-color: black; */
+    background: url("/foot-root-1/static/img/home3.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* transition: all 0.5s linear; */
+    background-color: rgb(242, 205, 252); 
 }
-.homepage-content-img4{
-    top: 1900px;
-    width: 100px;
-    height: 100px;
+
+.homepage-content-img7{
+    top: 3330px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(13%);
+    width: 746.25px;
+    height:527.5px;
     flex-shrink: 0;
     border-radius: 33.854px;
-    /* border: 0.677px solid #FFF; */
-    background: url("/foot-root-1/static/img/bingjun.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-color: black; */
+    background: url("/foot-root-1/static/img/home7.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* transition: all 0.5s linear; */
 }
+
+.homepage-content-img8{
+    top: 4030px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-50%);
+    width: 1100px;
+    height:298px;
+    flex-shrink: 0;
+    border-radius: 90.854px;
+    /* background: url("/foot-root-1/static/img/home3.png"),no-repeat,center,center; */
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* transition: all 0.5s linear; */
+    background-color: rgb(172, 91, 194); 
+}
+
+.homepage-content-img9{
+    top: 4330px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-113%);
+    width: 645px;
+    height: 711px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/static/img/home9.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* transition: all 0.5s linear; */
+}
+.homepage-content-img10{
+    top: 5030px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 794px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/static/img/home10-2.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* transition: all 0.5s linear; */
+}
+
+.homepage-content-img11{
+    top: 5960px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-50%);
+    width: 456px;
+    height: 550px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/static/img/home11-2.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    background-color: rgb(234, 200, 244); 
+    /* transition: all 0.5s linear; */
+}
+
+.homepage-content-img12{
+    top: 6560px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-50%);
+    width: 1177px;
+    height: 735px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/static/img/home12-2.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    background-color: rgb(234, 200, 244); 
+    /* transition: all 0.5s linear; */
+}
+.homepage-content-img13{
+    top: 7460px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-35%);
+    width: 1000px;
+    height: 700px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/static/img/home13-3.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* background-color: rgb(234, 200, 244);  */
+    /* transition: all 0.5s linear; */
+}
+.homepage-content-img14{
+    top: 8160px;
+    left: 50%; /* 左侧对齐到容器的中间 */
+    transform: translateX(-75%);
+    width: 1104px;
+    height: 671px;
+    flex-shrink: 0;
+    border-radius: 33.854px;
+    background: url("/foot-root-1/static/img/home14-3.png"),no-repeat,center,center;
+    background-size: contain; /* 背景图片等比例缩小 */
+    opacity: 0;
+    /* background-color: rgb(234, 200, 244);  */
+    /* transition: all 0.5s linear; */
+}
+
 /*主界面文本框样式*/
 
 .homepage-content1{
-    top: 700px;
-    transform: translateX(28%);
+    top: 980px;
+    transform: translateX(82%);
     width: 640px;
     height: 450px;
     opacity: 0;
     transition: all 0.5s linear;
 }
 
+.homepage-content2{
+    top: 1050px;
+    transform: translateX(-78%);
+    width: 640px;
+    height: 450px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content3{
+    top: 1570px;
+    transform: translateX(40%);
+    width: 840px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content4{
+    top: 2170px;
+    transform: translateX(-40%);
+    width: 840px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.homepage-content5{
+    top: 2170px;
+    transform: translateX(40%);
+    width: 840px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content6{
+    top: 2770px;
+    transform: translateX(40%);
+    width: 840px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content7{
+    top: 3330px;
+    transform: translateX(-40%);
+    width: 840px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content8{
+    top: 4030px;
+    transform: translateX(0%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content9{
+    top: 4530px;
+    transform: translateX(30%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content10{
+    top: 5462px;
+    transform: translateX(-40%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content11-1{
+    top: 5962px;
+    transform: translateX(-40%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content11-2{
+    top: 5962px;
+    transform: translateX(40%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content12{
+    top: 6600px;
+    transform: translateX(25%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content13{
+    top: 7460px;
+    transform: translateX(-45%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
+.homepage-content14{
+    top: 8160px;
+    transform: translateX(50%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
 
-
-
-
+.homepage-content15{
+    top: 9060px;
+    transform: translateX(0%);
+    width: 1040px;
+    height: 350px;
+    opacity: 0;
+    transition: all 0.5s linear;
+    background: #cb8df1;
+    border-radius: 33.854px;
+}
 
 
 
